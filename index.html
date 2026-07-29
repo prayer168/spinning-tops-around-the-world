@@ -3,20 +3,255 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="以互動圖解探索陀螺的旋轉科學、臺灣玩法與世界文化。">
-  <title>旋轉世界：各國陀螺文化與科學</title>
+  <meta name="description" content="以互動圖解探索陀螺的角動量、力矩與進動，認識臺灣玩法及世界各地的陀螺文化。">
+  <meta name="theme-color" content="#0d201b">
+  <link rel="canonical" href="https://prayer168.github.io/spinning-tops-around-the-world/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="旋轉世界｜各國陀螺文化與科學">
+  <meta property="og:description" content="一顆小小的陀螺，連結旋轉科學、臺灣童玩與世界文化。">
+  <meta property="og:image" content="https://prayer168.github.io/spinning-tops-around-the-world/assets/images/social-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <title>旋轉世界｜各國陀螺文化與科學</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script defer src="js/app.js"></script>
+  <script defer src="js/navigation.js"></script>
+  <script defer src="js/interactions.js"></script>
+  <script defer src="js/quiz.js"></script>
+  <script defer src="js/progress.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">跳到主要內容</a>
+
   <header class="site-header">
-    <strong>旋轉世界</strong>
-    <span>互動教材建置中</span>
+    <a class="brand" href="#task" data-open-tab="task" aria-label="回到學習任務">
+      <span class="brand-mark" aria-hidden="true">360°</span>
+      <span><strong>旋轉世界</strong><small>TOPS · SCIENCE · CULTURE</small></span>
+    </a>
+    <div class="header-progress" aria-label="學習進度">
+      <span id="progress-label">已探索 1／7</span>
+      <div class="progress-track" aria-hidden="true"><i id="progress-bar"></i></div>
+    </div>
+    <button class="reset-progress" id="reset-progress" type="button">重設進度</button>
   </header>
+
+  <nav class="tab-dock" aria-label="教材頁籤">
+    <div class="tabs" role="tablist" aria-label="旋轉世界教材章節">
+      <button id="tab-task" role="tab" aria-selected="true" aria-controls="panel-task" tabindex="0" data-tab="task"><span>00</span>學習任務</button>
+      <button id="tab-science" role="tab" aria-selected="false" aria-controls="panel-science" tabindex="-1" data-tab="science"><span>01</span>旋轉科學</button>
+      <button id="tab-taiwan" role="tab" aria-selected="false" aria-controls="panel-taiwan" tabindex="-1" data-tab="taiwan"><span>02</span>臺灣陀螺</button>
+      <button id="tab-world" role="tab" aria-selected="false" aria-controls="panel-world" tabindex="-1" data-tab="world"><span>03</span>世界圖鑑</button>
+      <button id="tab-safety" role="tab" aria-selected="false" aria-controls="panel-safety" tabindex="-1" data-tab="safety"><span>04</span>操作安全</button>
+      <button id="tab-quiz" role="tab" aria-selected="false" aria-controls="panel-quiz" tabindex="-1" data-tab="quiz"><span>05</span>圖像挑戰</button>
+      <button id="tab-learn" role="tab" aria-selected="false" aria-controls="panel-learn" tabindex="-1" data-tab="learn"><span>06</span>自主學習</button>
+    </div>
+  </nav>
+
   <main id="main">
-    <h1>旋轉世界：各國陀螺文化與科學</h1>
-    <p>教材架構已建立，內容與互動正在製作。</p>
+    <section class="tab-panel task-panel" id="panel-task" role="tabpanel" aria-labelledby="tab-task" data-panel="task">
+      <div class="hero">
+        <img src="assets/images/hero-world-tops.webp" alt="木桌上排列臺灣、日本、韓國、印度、東南亞、墨西哥與歐洲不同造型的陀螺，背景可見世界地圖輪廓" width="1536" height="1024" fetchpriority="high">
+        <div class="hero-shade"></div>
+        <div class="hero-copy wrap">
+          <p class="eyebrow">SPINNING TOPS AROUND THE WORLD</p>
+          <h1>一顆陀螺，<br><em>轉出科學與文化。</em></h1>
+          <p class="hero-lede">一顆小小的陀螺，為什麼能站著旋轉？世界各地又發展出哪些不同玩法？</p>
+          <button class="button button-primary" type="button" data-open-tab="science">開始探索旋轉科學</button>
+        </div>
+        <div class="hero-facts wrap" aria-label="三個核心焦點">
+          <article><strong>01</strong><span>看見角動量、力矩與進動</span></article>
+          <article><strong>02</strong><span>練習臺灣木陀螺的安全玩法</span></article>
+          <article><strong>03</strong><span>比較不同文化的造型與規則</span></article>
+        </div>
+      </div>
+
+      <div class="task-intro wrap">
+        <div>
+          <p class="section-number">LEARNING MISSION · 40–50 MIN</p>
+          <h2>先帶著問題出發</h2>
+        </div>
+        <p class="lead">這不是一場背名詞的旅行。你要找出位置、方向與證據，調整變因，最後用一張圖解釋「陀螺怎麼從站穩到倒下」。</p>
+        <div class="mission-grid">
+          <article><span aria-hidden="true">◎</span><h3>辨識構造</h3><p>找出旋轉軸、重心、接觸點與本體。</p></article>
+          <article><span aria-hidden="true">↻</span><h3>解釋運動</h3><p>用角動量、力矩、進動與阻力連起因果。</p></article>
+          <article><span aria-hidden="true">⌁</span><h3>比較設計</h3><p>觀察材料、質量分布、軸心與轉速的影響。</p></article>
+          <article><span aria-hidden="true">◉</span><h3>安全操作</h3><p>按正確順序檢查、投擲、等待與回收。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="panel-science" role="tabpanel" aria-labelledby="tab-science" data-panel="science" hidden>
+      <div class="panel-head wrap">
+        <div><p class="section-number">01 · PHYSICS OF SPIN</p><h2>旋轉不是抵消重力，<br><em>而是改變傾倒的方式。</em></h2></div>
+        <p>快速旋轉的陀螺具有角動量。重力造成的力矩會改變角動量的方向，軸線因此進動；阻力讓轉速逐漸降低，最後才倒下。</p>
+      </div>
+
+      <div class="science-feature wrap">
+        <figure class="editorial-visual">
+          <img src="assets/images/science-anatomy.webp" alt="傳統木陀螺的教學近景，可清楚看見木製本體、頂部、金屬尖端與接觸地面的支點" width="1536" height="1024" loading="lazy">
+          <figcaption>圖像負責呈現材質與構造；精確位置由右側SVG圖解標示。</figcaption>
+        </figure>
+        <div class="anatomy-diagram">
+          <svg viewBox="0 0 520 500" role="img" aria-labelledby="anatomy-title anatomy-desc">
+            <title id="anatomy-title">陀螺構造與受力圖</title>
+            <desc id="anatomy-desc">陀螺以尖端接觸地面，旋轉軸穿過本體；重心位於軸線上，重力向下。當軸傾斜，重心與支點錯開而產生力矩。</desc>
+            <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="currentColor"/></marker></defs>
+            <path class="top-body" d="M260 105 C175 120 130 220 165 305 C185 352 225 378 260 392 C295 378 335 352 355 305 C390 220 345 120 260 105Z"/>
+            <path class="top-cap" d="M225 110 Q260 55 295 110Z"/>
+            <path class="top-tip" d="M248 390 L260 458 L272 390Z"/>
+            <line class="axis-line" x1="260" y1="45" x2="260" y2="465"/>
+            <circle class="center-dot" cx="260" cy="250" r="10"/>
+            <circle class="contact-dot" cx="260" cy="458" r="8"/>
+            <line class="force-line" x1="260" y1="260" x2="260" y2="340" marker-end="url(#arrow)"/>
+            <g class="diagram-label"><line x1="250" y1="72" x2="105" y2="72"/><text x="95" y="78" text-anchor="end">旋轉軸</text></g>
+            <g class="diagram-label"><line x1="250" y1="250" x2="112" y2="250"/><text x="102" y="256" text-anchor="end">重心</text></g>
+            <g class="diagram-label"><line x1="270" y1="458" x2="405" y2="458"/><text x="415" y="464">接觸點</text></g>
+            <text class="force-label" x="280" y="310">重力</text>
+          </svg>
+          <p class="diagram-note"><strong>觀察任務：</strong>如果重心不在接觸點正上方，重力對接觸點會產生什麼轉動效果？</p>
+        </div>
+      </div>
+
+      <div class="concept-grid wrap" id="science-concepts" aria-live="polite"></div>
+
+      <div class="stage-story section-dark">
+        <div class="wrap split-layout">
+          <figure class="editorial-visual editorial-visual-dark">
+            <img src="assets/images/science-stages.webp" alt="同一顆木陀螺依序呈現高速穩定、軸線傾斜進動、低速搖晃與倒下三個階段" width="1536" height="1024" loading="lazy">
+            <figcaption>由左至右：高速穩定、傾斜進動、減速搖晃後倒下。</figcaption>
+          </figure>
+          <ol class="stage-list">
+            <li><span>1</span><div><h3>高速：方向難改變</h3><p>角動量較大，短時間內軸線方向不容易被大幅改變。</p></div></li>
+            <li><span>2</span><div><h3>傾斜：力矩造成進動</h3><p>重力沒有消失；它對支點產生力矩，使軸線沿圓錐路徑移動。</p></div></li>
+            <li><span>3</span><div><h3>減速：晃動加劇</h3><p>摩擦與空氣阻力耗散能量，進動變明顯，最後無法維持旋轉姿態。</p></div></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="lab wrap" id="spin-lab">
+        <div class="lab-copy">
+          <p class="section-number">INTERACTIVE LAB</p>
+          <h2>改一個變因，<br>看穩定性怎麼變</h2>
+          <p>這是定性模型，用來比較趨勢，不是精密預測真實陀螺的秒數。</p>
+          <figure class="variables-visual">
+            <img src="assets/images/science-variables.webp" alt="三組陀螺比較不同轉速、地面粗糙度與重心高度，造型相同但運動穩定程度不同" width="1536" height="1024" loading="lazy">
+          </figure>
+        </div>
+        <div class="simulator" aria-label="陀螺穩定性互動模擬">
+          <div class="sim-stage" id="sim-stage">
+            <div class="precession-path" aria-hidden="true"></div>
+            <div class="sim-rig" id="sim-rig" aria-hidden="true"><div class="sim-top"><i></i></div></div>
+            <div class="sim-floor" aria-hidden="true"></div>
+            <p class="sim-status" id="sim-status" aria-live="polite">準備完成：調整滑桿後按播放。</p>
+          </div>
+          <div class="controls">
+            <label for="speed-control"><span>初始轉速</span><output id="speed-output">80</output><input id="speed-control" type="range" min="20" max="100" value="80"></label>
+            <label for="friction-control"><span>地面摩擦</span><output id="friction-output">25</output><input id="friction-control" type="range" min="5" max="100" value="25"></label>
+            <label for="center-control"><span>重心高度</span><output id="center-output">35</output><input id="center-control" type="range" min="15" max="85" value="35"></label>
+          </div>
+          <div class="control-buttons" aria-label="動畫控制">
+            <button id="sim-play" type="button">播放</button><button id="sim-pause" type="button">暫停</button><button id="sim-replay" type="button">重播</button><button id="sim-reset" type="button">重設</button>
+          </div>
+          <label class="speed-select" for="animation-speed">播放速度<select id="animation-speed"><option value="0.6">慢速</option><option value="1" selected>正常</option><option value="1.5">快速</option></select></label>
+          <div class="evidence" id="sim-evidence"><strong>預測：</strong>較高轉速、較低摩擦與較低重心，通常更有利於維持穩定。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="panel-taiwan" role="tabpanel" aria-labelledby="tab-taiwan" data-panel="taiwan" hidden>
+      <div class="panel-head wrap">
+        <div><p class="section-number">02 · TOPS IN TAIWAN</p><h2>從木工餘料，<br><em>轉成共同記憶。</em></h2></div>
+        <p>臺灣早期常用生活周遭材料製作童玩。大溪的木器工藝與社區活動，讓大型木陀螺成為醒目的地方文化；學生操作仍應選用合適尺寸。</p>
+      </div>
+      <div class="wrap split-layout taiwan-lead">
+        <figure class="editorial-visual"><img src="assets/images/taiwan-wood-top.webp" alt="臺灣傳統車削木陀螺近景，原木本體帶有琥珀與磚紅彩繪環紋，底部裝有金屬陀螺釘" width="1536" height="1024" loading="lazy"><figcaption>木材、外形、配重與尖端共同影響旋轉表現；彩繪則留下地方與個人的記憶。</figcaption></figure>
+        <div class="culture-note"><p class="card-label">TAIWAN MEMORY</p><h3>「干樂」與「釘干樂」</h3><p>政府童玩資料記錄，陀螺在臺灣也有「干樂」的稱呼；以陀螺撞擊、比速度與準度的玩法，臺語常稱「釘干樂」。名稱與規則會隨地方、世代而不同。</p><p>大溪的陀螺文化和木器工藝緊密相連，現代活動包含工藝示範、彩繪、教學與競賽。</p></div>
+      </div>
+      <div class="top-type-grid wrap" id="taiwan-top-types"></div>
+      <div class="section-dark taiwan-gallery">
+        <div class="wrap two-visuals">
+          <figure class="editorial-visual editorial-visual-dark"><img src="assets/images/taiwan-throw-steps.webp" alt="學生在成人指導下依序纏繩、握住木陀螺、朝清空的地面投擲並抽回繩子" width="1536" height="1024" loading="lazy"><figcaption>繩擲木陀螺：繩圈要整齊，投擲區要先清空，放手與抽繩必須協調。</figcaption></figure>
+          <figure class="editorial-visual editorial-visual-dark"><img src="assets/images/taiwan-games.webp" alt="安全劃線場地中，學生分組進行陀螺比久、定點與命中目標三種遊戲，等待者站在界線後" width="1536" height="1024" loading="lazy"><figcaption>比久、定點、打準都能練習控制；碰撞玩法要有專用場地與更大安全距離。</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="panel-world" role="tabpanel" aria-labelledby="tab-world" data-panel="world" hidden>
+      <div class="panel-head wrap">
+        <div><p class="section-number">03 · WORLD ATLAS</p><h2>原理相通，<br><em>造型與玩法並不相同。</em></h2></div>
+        <p>「國家」只是方便閱讀的入口；實際傳統往往跨越地區、語言與社群。點選卡片，比較材料、啟動方式和代表玩法。</p>
+      </div>
+      <div class="atlas-gallery wrap">
+        <figure><img src="assets/images/atlas-japan-korea.webp" alt="並列日本木獨樂、小型金屬貝獨樂與韓國木製鞭陀螺，造型彼此清楚不同" width="1536" height="1024" loading="lazy"><figcaption>日本與韓國</figcaption></figure>
+        <figure><img src="assets/images/atlas-china-diabolo.webp" alt="中國木陀螺與竹木空竹並列比較，前者以尖端接觸地面，後者以中軸架在雙棒繩線上" width="1536" height="1024" loading="lazy"><figcaption>中國陀螺與空竹</figcaption></figure>
+        <figure><img src="assets/images/atlas-india-seasia.webp" alt="印度lattu、印尼gasing與馬來西亞盤形gasing並列，呈現不同木材、繩槽與外形" width="1536" height="1024" loading="lazy"><figcaption>印度與東南亞</figcaption></figure>
+        <figure><img src="assets/images/atlas-mexico.webp" alt="墨西哥彩繪木製trompo與棉繩，倒梨形本體下方有金屬尖端" width="1536" height="1024" loading="lazy"><figcaption>墨西哥與拉丁美洲</figcaption></figure>
+        <figure><img src="assets/images/atlas-europe.webp" alt="歐洲常見的手捻柄陀螺、鞭陀螺與按壓後會發聲的鐵皮陀螺並列" width="1536" height="1024" loading="lazy"><figcaption>歐洲常見機構</figcaption></figure>
+      </div>
+      <div class="atlas-layout wrap">
+        <div class="atlas-buttons" id="atlas-buttons" aria-label="選擇地區"></div>
+        <article class="atlas-detail" id="atlas-detail" aria-live="polite" tabindex="-1"></article>
+      </div>
+      <aside class="compare-rule wrap"><strong>比較時記住</strong><span>相同的旋轉科學，不代表同一個起源；相似的外形，也不代表玩法完全相同。</span></aside>
+    </section>
+
+    <section class="tab-panel" id="panel-safety" role="tabpanel" aria-labelledby="tab-safety" data-panel="safety" hidden>
+      <div class="panel-head wrap">
+        <div><p class="section-number">04 · SAFE OPERATION</p><h2>先畫好界線，<br><em>才讓陀螺越界。</em></h2></div>
+        <p>真正熟練的人不只會投擲，也會檢查器材、觀察周圍、等待陀螺停穩，並照顧所有人的安全。</p>
+      </div>
+      <figure class="safety-visual wrap"><img src="assets/images/safety-do-dont.webp" alt="安全操作正誤對照：正確側先清空場地並在界線後等待，需注意側出現靠近人群、玻璃、破損繩索與徒手抓高速陀螺等危險情境" width="1536" height="1024" loading="lazy"><figcaption>正確：清空扇形區、檢查器材、停穩再撿。需注意：人群、玻璃、裂痕、尖端與高速旋轉。</figcaption></figure>
+      <div class="safety-grid wrap">
+        <article class="sequence-card">
+          <p class="card-label">ORDER THE STEPS</p><h3>排出安全操作六步驟</h3><p>依序點選；也可按 Tab 移動，按 Enter 加入。選錯可以復原或重設。</p>
+          <div class="sequence-bank" id="sequence-bank" aria-label="待排序步驟"></div>
+          <ol class="sequence-answer" id="sequence-answer" aria-live="polite"></ol>
+          <div class="control-buttons"><button id="sequence-undo" type="button">復原一步</button><button id="sequence-reset" type="button">重設</button><button id="sequence-check" type="button">檢查順序</button></div>
+          <p class="sequence-feedback" id="sequence-feedback" role="status"></p>
+        </article>
+        <div class="safety-rules">
+          <article><span>1</span><div><h3>清空扇形區</h3><p>投擲者前方、側前方都不能有人、玻璃、車輛或易碎物。</p></div></article>
+          <article><span>2</span><div><h3>檢查繩、釘、本體</h3><p>繩索毛裂、尖端鬆動或木身破裂，都先停用。</p></div></article>
+          <article><span>3</span><div><h3>一組一組操作</h3><p>旁觀者站在等待線後；大型陀螺由成人或熟練者示範。</p></div></article>
+          <article><span>4</span><div><h3>停穩才回收</h3><p>不要徒手抓高速陀螺，也不要跨進仍有人投擲的區域。</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="tab-panel quiz-panel" id="panel-quiz" role="tabpanel" aria-labelledby="tab-quiz" data-panel="quiz" hidden>
+      <div class="panel-head wrap">
+        <div><p class="section-number">05 · VISUAL CHALLENGE</p><h2>不是背答案，<br><em>是找出最有力的證據。</em></h2></div>
+        <p>八題涵蓋原理、變因、文化比較、構造與安全情境。作答後立刻查看解析，也能回到對應教材。</p>
+      </div>
+      <div class="quiz-shell wrap">
+        <div class="quiz-meter"><span id="quiz-counter">第 1／8 題</span><div><i id="quiz-progress"></i></div><strong id="quiz-score">0 分</strong></div>
+        <article class="quiz-card" id="quiz-card" aria-live="polite"></article>
+        <div class="quiz-actions"><button id="quiz-next" type="button" disabled>下一題</button><button id="quiz-restart" type="button" hidden>重新挑戰</button></div>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="panel-learn" role="tabpanel" aria-labelledby="tab-learn" data-panel="learn" hidden>
+      <div class="panel-head wrap">
+        <div><p class="section-number">06 · KEEP EXPLORING</p><h2>把好奇心，<br><em>轉向可靠的來源。</em></h2></div>
+        <p>這些資源來自政府、博物館與大學。每一筆都說明適合對象與可學內容，不只丟下一串網址。</p>
+      </div>
+      <div class="resource-list wrap" id="resource-list"></div>
+      <div class="source-note">
+        <div class="wrap source-inner"><div><p class="section-number">SOURCE LITERACY</p><h2>圖像幫助理解，<br>來源幫助判斷。</h2></div><div><p>本教材的文化圖像由 Image 2.0 生成，不是文物照片，也不能取代器物鑑定。歷史、名稱與玩法以機構資料為依據，遇到起源爭議時不做唯一化宣稱。</p><a href="docs/references.md">閱讀完整來源與查核紀錄 →</a></div></div>
+      </div>
+    </section>
+
+    <nav class="panel-nav wrap" aria-label="上一頁與下一頁">
+      <button id="previous-panel" type="button">← 上一頁</button>
+      <p id="panel-position">1／7 · 學習任務</p>
+      <button id="next-panel" type="button">下一頁 →</button>
+    </nav>
   </main>
+
+  <footer class="site-footer">
+    <div class="wrap"><p><strong>旋轉世界</strong><br>各國陀螺文化與科學互動教材</p><p>適合國小五年級至國中低年級<br>資料查核：2026-07-29</p></div>
+  </footer>
 </body>
 </html>
-

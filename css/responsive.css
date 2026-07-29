@@ -1,0 +1,77 @@
+@media (max-width: 1050px) {
+  .tabs { overflow-x: auto; display: flex; scrollbar-width: thin; }
+  .tabs button { min-width: 142px; }
+  .concept-grid { grid-template-columns: repeat(2, 1fr); }
+  .atlas-gallery { grid-template-columns: repeat(4, 1fr); }
+  .atlas-gallery figure:first-child { grid-column: span 2; }
+  .atlas-gallery figure:nth-child(n) { grid-column: span 2; }
+  .resource-item { grid-template-columns: 135px 1fr 1.1fr 22px; }
+}
+
+@media (max-width: 820px) {
+  :root { --wrap: min(100% - 32px, 680px); }
+  html { scroll-padding-top: 160px; }
+  .site-header { min-height: 82px; padding: 9px 16px; grid-template-columns: 1fr auto; gap: 8px; }
+  .header-progress { grid-column: 1 / -1; grid-row: 2; width: 100%; }
+  .reset-progress { grid-column: 2; grid-row: 1; }
+  .tab-dock { top: 82px; }
+  .tabs { padding-inline: 8px; }
+  .tabs button { min-height: 58px; min-width: 132px; font-size: 12px; }
+  .hero { min-height: calc(100svh - 140px); }
+  .hero > img { object-position: 62% center; }
+  .hero-copy { padding-block: 70px 230px; }
+  .hero h1 { font-size: clamp(46px,12vw,72px); }
+  .hero-facts { bottom: 16px; grid-template-columns: 1fr; }
+  .hero-facts article { min-height: auto; padding: 9px 0; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.14); }
+  .hero-facts article + article { padding-left: 0; }
+  .hero-facts strong { font-size: 22px; }
+  .hero-facts span { max-width: none; font-size: 11px; }
+  .task-intro > div:first-child, .panel-head, .science-feature, .split-layout, .lab, .atlas-layout, .safety-grid, .source-inner { grid-template-columns: 1fr; gap: 34px; }
+  .task-intro, .panel-head { padding-block: 70px 38px; }
+  .lead { margin-left: 0; }
+  .mission-grid { grid-template-columns: repeat(2, 1fr); }
+  .mission-grid article:nth-child(2) { border-right: 0; }
+  .mission-grid article:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+  .concept-grid { padding-bottom: 70px; }
+  .stage-story, .taiwan-gallery, .source-note { padding-block: 65px; }
+  .lab { padding-block: 70px 10px; }
+  .top-type-grid, .two-visuals { grid-template-columns: 1fr; }
+  .atlas-detail { min-height: 0; }
+  .resource-item { grid-template-columns: 1fr 25px; gap: 8px 16px; }
+  .resource-item span, .resource-item strong, .resource-item p { grid-column: 1; }
+  .resource-item b { grid-column: 2; grid-row: 1 / span 3; align-self: center; }
+}
+
+@media (max-width: 560px) {
+  .brand small { display: none; }
+  .brand-mark { width: 36px; height: 36px; }
+  .reset-progress { padding: 7px 10px; }
+  .hero-copy { padding-top: 52px; }
+  .hero h1 { font-size: 42px; }
+  .hero-lede { font-size: 15px; }
+  .mission-grid, .concept-grid { grid-template-columns: 1fr; }
+  .mission-grid article { min-height: auto; border-right: 0; border-bottom: 1px solid var(--line); }
+  .concept-card { min-height: auto; }
+  .panel-head h2, .task-intro h2, .lab h2, .source-inner h2 { font-size: 38px; }
+  .panel-head > p { font-size: 15px; }
+  .anatomy-diagram { padding: 12px; }
+  .sim-stage { height: 300px; }
+  .atlas-gallery { grid-template-columns: 1fr; grid-auto-rows: 210px; }
+  .atlas-gallery figure:nth-child(n) { grid-column: auto; grid-row: auto; }
+  .atlas-detail dl, .top-type-card dl { grid-template-columns: 1fr; }
+  .atlas-detail dd, .top-type-card dd { padding-top: 0; border-top: 0; }
+  .compare-rule { grid-template-columns: 1fr; gap: 5px; }
+  .quiz-card { min-height: 500px; }
+  .panel-nav { grid-template-columns: 1fr 1fr; }
+  .panel-nav p { grid-column: 1 / -1; grid-row: 1; text-align: center; }
+  .site-footer > div { display: grid; }
+}
+
+@media print {
+  .site-header, .tab-dock, .panel-nav, .button, .control-buttons, .quiz-actions { display: none !important; }
+  .tab-panel[hidden] { display: block !important; }
+  .tab-panel { break-before: page; padding-bottom: 30px; }
+  .hero { min-height: 680px; }
+  .section-dark, .simulator, .culture-note, .atlas-detail, .sequence-card, .quiz-card, .source-note, .site-footer { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+
