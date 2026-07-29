@@ -1,0 +1,27 @@
+{
+  "scienceConcepts": [
+    {"title":"找出旋轉軸","keyword":"旋轉軸","summary":"陀螺繞著一條穿過本體的想像直線旋轉；軸心越正，晃動通常越小。","visual":"axis"},
+    {"title":"角動量指方向","keyword":"角動量","summary":"轉得快、質量離軸較遠時，旋轉狀態較不容易被改變。它不是把重力取消，而是讓傾倒過程變得不同。","visual":"momentum"},
+    {"title":"重力造成力矩","keyword":"力矩","summary":"重心不在接觸點正上方時，重力對支點產生轉動效果，改變角動量的方向。","visual":"torque"},
+    {"title":"軸線繞圈移動","keyword":"進動","summary":"快速旋轉的陀螺受到重力力矩後，軸線常沿圓錐狀路徑繞圈，而不是立刻直直倒下。","visual":"precession"},
+    {"title":"阻力偷走能量","keyword":"摩擦與空氣阻力","summary":"尖端與地面摩擦、空氣阻力會耗散能量。轉速降低後，晃動與進動會更明顯，最後倒下。","visual":"friction"},
+    {"title":"設計改變穩定性","keyword":"質量分布與重心","summary":"同樣轉速下，對稱、軸心準確、合適的質量分布與較低重心，通常更有利於穩定旋轉。","visual":"design"}
+  ],
+  "taiwanTops": [
+    {"id":"rope","name":"繩擲木陀螺","type":"傳統童玩","material":"車削木材、金屬陀螺釘、棉繩或麻繩","launch":"從尖端附近往上纏繩，握住陀螺後投向平坦地面，同時拉回繩子。","play":"比久、定點、打準；傳統競技也可能互相撞擊。","safety":"先清空投擲扇形區；大型陀螺須由成人與熟練者指導。"},
+    {"id":"whip","name":"鞭陀螺","type":"持續驅動型","material":"木製陀螺與軟繩鞭","launch":"先用手或繩使陀螺起轉，再以鞭繩沿旋轉方向輕帶，補充轉動能量。","play":"維持旋轉、沿路線前進或比誰控制得久。","safety":"使用柔軟鞭繩，彼此保持距離，不朝人揮打。"},
+    {"id":"finger","name":"指尖陀螺","type":"現代隨身型","material":"塑膠或金屬外殼、中央軸承","launch":"捏住中央軸承，用另一指撥動外翼。","play":"觀察軸承摩擦、平衡與轉動時間。","safety":"不靠近頭髮、眼睛與幼兒；破損或鬆脫就停止使用。"},
+    {"id":"battle","name":"組裝競技陀螺","type":"現代競技型","material":"塑膠、金屬配重、尖端與發射器","launch":"依產品機構裝入發射器，在專用競技盤內啟動。","play":"比較耐久、撞擊、移動路徑與零件配置。","safety":"只在有護壁的競技盤使用，不改裝危險尖端。"}
+  ],
+  "worldTops": [
+    {"id":"japan","region":"日本","localName":"独楽（koma）／貝独楽（beigoma）","material":"木、竹、金屬等；貝獨樂常見小型鑄鐵本體","shape":"koma 是陀螺的總稱之一；貝獨樂體積小、重心低，外觀像厚實的金屬圓盤。","launch":"依類型用手捻、繩擲或把繩纏在貝獨樂上抽出。","play":"比久、比穩，也可讓貝獨樂在場內碰撞。","culture":"日本玩具館藏可見各地郷土陀螺；Japan Search 也收錄東京博物館的貝獨樂。","source":"https://jpsearch.go.jp/item/tokyomuseumcolection-edo_tokyo_museumjbD90090028_90090029","visual":"asia-north"},
+    {"id":"korea","region":"韓國","localName":"팽이（paengi）","material":"常用硬木；也有葫蘆片與木軸等地方形式","shape":"可見圓錐形、上下兩端尖的長鼓形等。","launch":"傳統玩法常先使陀螺起轉，再用鞭繩反覆抽打；冰面是代表性的冬季場景。","play":"鬥陀螺、比久、沿線抽打前進。","culture":"韓國文化體育觀光部兒童網站把抽陀螺列為代表性的冬季民俗遊戲。","source":"https://www.mcst.go.kr/usr/child/enter/play/paengi.jsp","visual":"asia-north"},
+    {"id":"china","region":"中國","localName":"陀螺／空竹（diabolo）","material":"陀螺常用木或金屬；空竹傳統上用竹木製作","shape":"一般陀螺以尖端接觸地面；空竹則是中軸連接單杯或雙杯，由兩棒之間的繩支撐。","launch":"陀螺可手捻、繩擲或鞭打；空竹靠雙手提拉抖動使中軸高速旋轉。","play":"陀螺可比久與碰撞；空竹可提、拉、抖、盤、拋、接。","culture":"空竹與地面單點支撐的陀螺同樣運用旋轉，但構造與操作系統不同，不應畫成同一種玩具。","source":"https://www.chnmuseum.cn/zl/zlhg/201812/t20181220_32285.shtml","visual":"china"},
+    {"id":"india","region":"印度","localName":"लट्टू（lattu／lattoo；部分地區稱 bambaram 等）","material":"常見車削木本體、金屬尖端與棉繩","shape":"教育資料常見下半部有繩槽、形似蕪菁或半球接圓錐的木陀螺。","launch":"把棉繩纏在下半部，投向地面並抽回繩子；熟練者可用繩把旋轉中的陀螺接回手上。","play":"比久、快速接起，或把圈內其他陀螺撞出。","culture":"印度教育部的玩具本位教學指南以 lattoo 為傳統旋轉玩具，連結重心與圓周運動。","source":"https://dsel.education.gov.in/sites/default/files/update/toy_based_pedagogy.pdf","visual":"south-seasia"},
+    {"id":"indonesia","region":"印尼","localName":"gasing／gasing kekean","material":"多用經挑選的硬木，也有地方性的金屬形式","shape":"下端尖、圓厚而重視平衡，不同島嶼與社群的造型並不相同。","launch":"繩子纏住本體後，朝平坦土地投擲並快速抽繩。","play":"比旋轉時間、比準度，或以自己的陀螺攻擊對手陀螺。","culture":"泗水博物館把 gasing kekean 視為結合技巧、精準、手眼協調與運動精神的傳統遊戲。","source":"https://musea.surabaya.go.id/gasing-kekean-permainan-tradisional/","visual":"south-seasia"},
+    {"id":"malaysia","region":"馬來西亞","localName":"gasing pangkah／gasing uri","material":"木材為主，碰撞型陀螺可有金屬部件","shape":"官方文化資料列出心形、盤形、蛋形等多種地方造型。","launch":"用繩纏繞後投擲；尺寸應依玩家年齡與能力選擇。","play":"pangkah 以撞擊對手為目標；uri 比較誰旋轉得久。","culture":"gasing 在2009年被列入馬來西亞國家文化遺產傳統遊戲名單。","source":"https://www.heritage.gov.my/en/pengenalan-cawangan-adat-budaya/permainan-tradisi.html","visual":"south-seasia"},
+    {"id":"mexico","region":"墨西哥與拉丁美洲","localName":"trompo","material":"常見木本體、金屬尖端與棉繩，也有其他材料","shape":"圓肩、下部收尖，像倒置梨形；地方工藝的顏色與線條各有特色。","launch":"從尖端往上纏繩，握住後投出並抽回繩子。","play":"比久、定點、接到手上或完成繩上技巧；規則隨社群而異。","culture":"墨西哥文化部與國立通俗文化博物館把 trompo 列入傳統民間玩具展覽。","source":"https://www.gob.mx/cultura/prensa/muestran-influencia-del-juguete-tradicional-mexicano-en-el-arte","visual":"mexico"},
+    {"id":"europe","region":"歐洲常見形式","localName":"peg top／whipping top／humming top","material":"木、金屬或彩繪鐵皮，依機構不同而異","shape":"peg top 有長柄可手捻；whipping top 以鞭繩補充轉動；humming top 常是中空本體並會發聲。","launch":"可用手指、鞭繩、纏繩、螺旋推桿或按壓泵桿啟動。","play":"觀察旋轉時間、聲音、色彩混合或沿路線控制。","culture":"大英博物館將 peg-top 與 humming-top 列在 spinning-top 類別；V&A 教育資料也收錄 spinning tops、humming tops 與 gyroscopes。","source":"https://www.britishmuseum.org/collection/term/x9243","visual":"europe"}
+  ]
+}
+
