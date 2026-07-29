@@ -40,12 +40,14 @@
   .physics-overview-head > p:last-child { grid-column: 1; grid-row: auto; margin-top: 16px; }
   .physics-legend { grid-template-columns: repeat(2, 1fr); }
   .atlas-detail { min-height: 0; }
+  .atlas-detail-head { gap: 20px; }
   .resource-item { grid-template-columns: 1fr 25px; gap: 8px 16px; }
   .resource-item span, .resource-item strong, .resource-item p { grid-column: 1; }
   .resource-item b { grid-column: 2; grid-row: 1 / span 3; align-self: center; }
 }
 
 @media (max-width: 560px) {
+  :root { --flag-thumb: 28vw; }
   .brand small { display: none; }
   .brand-mark { width: 36px; height: 36px; }
   .reset-progress { padding: 7px 10px; }
@@ -62,6 +64,10 @@
   .atlas-gallery { grid-template-columns: 1fr; grid-auto-rows: 210px; }
   .atlas-gallery figure:nth-child(n) { grid-column: auto; grid-row: auto; }
   .atlas-detail dl, .top-type-card dl { grid-template-columns: 1fr; }
+  .atlas-detail-head { grid-template-columns: 1fr auto; }
+  .atlas-detail-head h3 { font-size: 34px; }
+  .flag-lightbox { padding-inline: 10px; }
+  .flag-lightbox-card { min-height: 500px; padding-inline: 18px; }
   .physics-overview { padding-top: 48px; }
   .physics-overlay .svg-label { display: none; }
   .physics-legend { grid-template-columns: 1fr; }

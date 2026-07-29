@@ -10,8 +10,9 @@ const assert = (condition, label) => {
   checks.push(label);
 };
 
-const [html, content, quiz, resources, config] = await Promise.all([
+const [html, app, content, quiz, resources, config] = await Promise.all([
   read("index.html"),
+  read("js/app.js"),
   read("data/content.json").then(JSON.parse),
   read("data/quiz.json").then(JSON.parse),
   read("data/resources.json").then(JSON.parse),
@@ -19,7 +20,7 @@ const [html, content, quiz, resources, config] = await Promise.all([
 ]);
 
 assert(config.language === "zh-TW", "教材語言設定為 zh-TW");
-assert(config.version === "1.0.2", "專案版本為 1.0.2");
+assert(config.version === "1.1.0", "專案版本為 1.1.0");
 
 const tabs = html.match(/role="tab"/g) ?? [];
 const panels = html.match(/role="tabpanel"/g) ?? [];
@@ -33,6 +34,8 @@ assert(content.taiwanTops.length === 4, "臺灣陀螺包含 4 種類型");
 assert(content.taiwanTops.every(item => item.image && item.alt && item.visualCaption), "四種臺灣陀螺各有獨立圖像、alt 與圖說");
 assert(content.worldTops.length === 8, "世界圖鑑包含 8 個國家或地區條目");
 assert(content.worldTops.every(item => /^https:\/\//.test(item.source)), "世界圖鑑各條目都有 HTTPS 機構來源");
+assert(content.worldTops.every(item => item.flagKey && item.flagName && item.flagNote && /^https:\/\//.test(item.flagSource)), "世界圖鑑八個條目各有旗幟名稱、說明與 HTTPS 官方來源");
+assert(new Set(content.worldTops.map(item => item.flagKey)).size === 8, "世界圖鑑八個條目各有獨立旗幟 SVG");
 
 assert(quiz.length === 8, "圖像判讀挑戰包含 8 題");
 assert(quiz.every(item => item.options.length === 4), "每題包含 4 個選項");
@@ -61,5 +64,6 @@ for (const file of actualImages) {
 assert(!/[A-Z]:\\|file:\/\//i.test(html), "HTML 不含本機絕對路徑");
 assert(html.includes('id="sim-play"') && html.includes('id="sim-pause"') && html.includes('id="sim-reset"'), "模擬器具有播放、暫停與重設控制");
 assert(html.includes('id="sequence-bank"') && html.includes('id="quiz-card"'), "排序活動與測驗容器存在");
+assert(html.includes('id="flag-lightbox"') && app.includes("createFlagSvg") && app.includes('event.key === "Escape"'), "旗幟具有 3 倍對話框、SVG 繪圖與 Escape 關閉機制");
 
 console.log(`通過 ${checks.length} 項結構與資料驗證。`);

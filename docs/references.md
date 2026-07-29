@@ -37,10 +37,22 @@
 11. The British Museum, *spinning-top; toy*. https://www.britishmuseum.org/collection/term/x9243
 12. Victoria and Albert Museum, *Moving Toys*. https://media.vam.ac.uk/media/documents/legacy_documents/file_upload/17576_file.pdf
 
+## 國旗與區域識別
+
+1. 日本政府，*The National Flag and Anthem*. https://www.japan.go.jp/japan/flagandanthem/index.html
+2. Korea.net，*Overview of Korea: National Symbols*. https://www.korea.net/AboutKorea/OverviewofKorea
+3. Supreme People's Court of the People's Republic of China，*Specifications for the national flag*. https://english.court.gov.cn/2016-04/14/c_761456.htm
+4. Ministry of Home Affairs, Government of India，*National Flag, Emblem and Anthem*. https://www.mha.gov.in/sites/default/files/nationalFlagEmblemAnthemEng_06082018_0.pdf
+5. Indonesia.go.id，〈Panduan dan Tata Cara Mengibarkan Sang Saka Merah Putih〉。https://indonesia.go.id/kategori/kependudukan/9784/panduan-dan-tata-cara-mengibarkan-sang-saka-merah-putih
+6. Government of Malaysia，*Flag of Malaysia*. https://www.malaysia.gov.my/en/government/kenali-malaysia/flag-of-malaysia
+7. Orden Jurídico Nacional, México，*Ley sobre el Escudo, la Bandera y el Himno Nacionales*. https://ordenjuridico.gob.mx/Documentos/Federal/html/wo13243.html
+8. European Union，*European flag*. https://european-union.europa.eu/principles-countries-history/symbols/european-flag_en
+
+旗幟使用原生 SVG 依官方幾何與元素說明重新繪製，不使用網路圖片。墨西哥國旗中央國徽在小尺寸教材圖示中以簡化 SVG 呈現；歐洲旗幟只作「歐洲常見形式」的區域識別，並非單一國家國旗。
+
 ## 使用原則
 
 - 本站只整理與改寫資料，不複製來源圖片或大段文字。
 - 地區卡使用「常見於」「官方資料記錄」等措辭，不把流傳範圍寫成唯一發源地。
 - 圖像由 Image 2.0 重新生成，只作教學示意；文化造型以機構資料交叉檢查。
 - 各來源的文字、影像與商標仍屬原權利人。
-

@@ -2,7 +2,7 @@
 @keyframes precess-fast { 0%,100% { transform: translateY(35px) rotate(calc(var(--tilt, 4deg) * -1)); } 50% { transform: translateY(35px) rotate(var(--tilt, 4deg)); } }
 .sim-stage.is-playing .sim-rig { animation: precess-fast var(--precession-duration, 2.6s) ease-in-out infinite; }
 .sim-stage.is-paused .sim-top, .sim-stage.is-paused .sim-rig { animation-play-state: paused; }
-.button, .tabs button, .atlas-buttons button, .quiz-options button, .resource-item { transition: color .2s ease, background-color .2s ease, border-color .2s ease, transform .2s ease; }
+.button, .tabs button, .atlas-buttons button, .flag-zoom-trigger, .quiz-options button, .resource-item { transition: color .2s ease, background-color .2s ease, border-color .2s ease, transform .2s ease; }
 .button:hover { transform: translateY(-2px); }
 .tab-panel.is-entering { animation: panel-in .34s ease both; }
 @keyframes panel-in { from { transform: translateY(10px); } to { transform: none; } }
