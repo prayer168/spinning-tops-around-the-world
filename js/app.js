@@ -22,6 +22,10 @@
     const host = document.querySelector("#taiwan-top-types");
     host.innerHTML = items.map(item => `
       <article class="top-type-card">
+        <figure>
+          <img src="${item.image}" alt="${item.alt}" width="900" height="900" loading="lazy">
+          <figcaption>${item.visualCaption}</figcaption>
+        </figure>
         <header><h3>${item.name}</h3><span>${item.type}</span></header>
         <dl>
           <dt>材料</dt><dd>${item.material}</dd>
@@ -93,4 +97,3 @@
 
   init();
 })();
-

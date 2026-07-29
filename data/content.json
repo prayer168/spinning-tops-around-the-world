@@ -8,10 +8,10 @@
     {"title":"設計改變穩定性","keyword":"質量分布與重心","summary":"同樣轉速下，對稱、軸心準確、合適的質量分布與較低重心，通常更有利於穩定旋轉。","visual":"design"}
   ],
   "taiwanTops": [
-    {"id":"rope","name":"繩擲木陀螺","type":"傳統童玩","material":"車削木材、金屬陀螺釘、棉繩或麻繩","launch":"從尖端附近往上纏繩，握住陀螺後投向平坦地面，同時拉回繩子。","play":"比久、定點、打準；傳統競技也可能互相撞擊。","safety":"先清空投擲扇形區；大型陀螺須由成人與熟練者指導。"},
-    {"id":"whip","name":"鞭陀螺","type":"持續驅動型","material":"木製陀螺與軟繩鞭","launch":"先用手或繩使陀螺起轉，再以鞭繩沿旋轉方向輕帶，補充轉動能量。","play":"維持旋轉、沿路線前進或比誰控制得久。","safety":"使用柔軟鞭繩，彼此保持距離，不朝人揮打。"},
-    {"id":"finger","name":"指尖陀螺","type":"現代隨身型","material":"塑膠或金屬外殼、中央軸承","launch":"捏住中央軸承，用另一指撥動外翼。","play":"觀察軸承摩擦、平衡與轉動時間。","safety":"不靠近頭髮、眼睛與幼兒；破損或鬆脫就停止使用。"},
-    {"id":"battle","name":"組裝競技陀螺","type":"現代競技型","material":"塑膠、金屬配重、尖端與發射器","launch":"依產品機構裝入發射器，在專用競技盤內啟動。","play":"比較耐久、撞擊、移動路徑與零件配置。","safety":"只在有護壁的競技盤使用，不改裝危險尖端。"}
+    {"id":"rope","name":"繩擲木陀螺","type":"傳統童玩","image":"assets/images/taiwan-top-rope.webp","alt":"米白紙張背景上的臺灣繩擲木陀螺與一卷棉繩，梨形木製本體有磚紅環紋、繩槽與短鈍金屬陀螺釘","visualCaption":"繩纏在本體外側，抽繩時帶動木陀螺旋轉。","material":"車削木材、金屬陀螺釘、棉繩或麻繩","launch":"從尖端附近往上纏繩，握住陀螺後投向平坦地面，同時拉回繩子。","play":"比久、定點、打準；傳統競技也可能互相撞擊。","safety":"先清空投擲扇形區；大型陀螺須由成人與熟練者指導。"},
+    {"id":"whip","name":"鞭陀螺","type":"持續驅動型","image":"assets/images/taiwan-top-whip.webp","alt":"米白紙張背景上的低矮木製鞭陀螺，旁邊放著一支末端繫有柔軟棉繩的木棒","visualCaption":"柔軟鞭繩沿旋轉方向輕帶，能持續補充轉動能量。","material":"木製陀螺與軟繩鞭","launch":"先用手或繩使陀螺起轉，再以鞭繩沿旋轉方向輕帶，補充轉動能量。","play":"維持旋轉、沿路線前進或比誰控制得久。","safety":"使用柔軟鞭繩，彼此保持距離，不朝人揮打。"},
+    {"id":"finger","name":"指尖陀螺","type":"現代隨身型","image":"assets/images/taiwan-top-finger.webp","alt":"米白紙張背景上的松綠色三翼指尖陀螺，中央圓形軸承與三個平衡配重環清楚可見","visualCaption":"手指固定中央軸承，外圍三翼繞著中心旋轉。","material":"塑膠或金屬外殼、中央軸承","launch":"捏住中央軸承，用另一指撥動外翼。","play":"觀察軸承摩擦、平衡與轉動時間。","safety":"不靠近頭髮、眼睛與幼兒；破損或鬆脫就停止使用。"},
+    {"id":"battle","name":"組裝競技陀螺","type":"現代競技型","image":"assets/images/taiwan-top-battle.webp","alt":"米白紙張背景上的無品牌組裝競技陀螺與護壁競技盤，旁邊分開排列塑膠環、金屬配重盤和圓鈍尖端","visualCaption":"外環、配重與尖端可分層組裝，必須在護壁競技盤內使用。","material":"塑膠、金屬配重、尖端與發射器","launch":"依產品機構裝入發射器，在專用競技盤內啟動。","play":"比較耐久、撞擊、移動路徑與零件配置。","safety":"只在有護壁的競技盤使用，不改裝危險尖端。"}
   ],
   "worldTops": [
     {"id":"japan","region":"日本","localName":"独楽（koma）／貝独楽（beigoma）","material":"木、竹、金屬等；貝獨樂常見小型鑄鐵本體","shape":"koma 是陀螺的總稱之一；貝獨樂體積小、重心低，外觀像厚實的金屬圓盤。","launch":"依類型用手捻、繩擲或把繩纏在貝獨樂上抽出。","play":"比久、比穩，也可讓貝獨樂在場內碰撞。","culture":"日本玩具館藏可見各地郷土陀螺；Japan Search 也收錄東京博物館的貝獨樂。","source":"https://jpsearch.go.jp/item/tokyomuseumcolection-edo_tokyo_museumjbD90090028_90090029","visual":"asia-north"},
@@ -24,4 +24,3 @@
     {"id":"europe","region":"歐洲常見形式","localName":"peg top／whipping top／humming top","material":"木、金屬或彩繪鐵皮，依機構不同而異","shape":"peg top 有長柄可手捻；whipping top 以鞭繩補充轉動；humming top 常是中空本體並會發聲。","launch":"可用手指、鞭繩、纏繩、螺旋推桿或按壓泵桿啟動。","play":"觀察旋轉時間、聲音、色彩混合或沿路線控制。","culture":"大英博物館將 peg-top 與 humming-top 列在 spinning-top 類別；V&A 教育資料也收錄 spinning tops、humming tops 與 gyroscopes。","source":"https://www.britishmuseum.org/collection/term/x9243","visual":"europe"}
   ]
 }
-

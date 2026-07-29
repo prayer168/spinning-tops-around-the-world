@@ -20,7 +20,7 @@
   .hero { min-height: calc(100svh - 140px); }
   .hero > img { object-position: 62% center; }
   .hero-copy { padding-block: 70px 230px; }
-  .hero h1 { font-size: clamp(46px,12vw,72px); }
+  .hero-title { font-size: clamp(46px,12vw,72px); }
   .hero-facts { bottom: 16px; grid-template-columns: 1fr; }
   .hero-facts article { min-height: auto; padding: 9px 0; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.14); }
   .hero-facts article + article { padding-left: 0; }
@@ -47,7 +47,7 @@
   .brand-mark { width: 36px; height: 36px; }
   .reset-progress { padding: 7px 10px; }
   .hero-copy { padding-top: 52px; }
-  .hero h1 { font-size: 42px; }
+  .hero-title { font-size: 42px; }
   .hero-lede { font-size: 15px; }
   .mission-grid, .concept-grid { grid-template-columns: 1fr; }
   .mission-grid article { min-height: auto; border-right: 0; border-bottom: 1px solid var(--line); }
@@ -74,4 +74,3 @@
   .hero { min-height: 680px; }
   .section-dark, .simulator, .culture-note, .atlas-detail, .sequence-card, .quiz-card, .source-note, .site-footer { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
 }
-
