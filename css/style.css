@@ -7,9 +7,9 @@
   --sage: #a9b49c;
   --amber: #d69743;
   --amber-light: #f0c57f;
-  --danger: #873a29;
+  --danger: #783323;
   --ink: #18211d;
-  --muted: #5e6963;
+  --muted: #48544e;
   --paper: #f4f0e7;
   --paper-2: #ebe6db;
   --white: #fffdf7;
@@ -132,7 +132,8 @@ h1, h2, h3, h4 { line-height: 1.18; }
 .sim-stage { position: relative; height: 340px; overflow: hidden; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.12); border-radius: 18px; background: radial-gradient(circle at 50% 30%, rgba(240,197,127,.12), transparent 45%), var(--pine-950); }
 .sim-floor { position: absolute; left: 8%; right: 8%; bottom: 65px; height: 2px; background: rgba(255,255,255,.32); }
 .sim-rig { position: relative; z-index: 2; width: 120px; height: 190px; transform-origin: 50% 100%; transform: translateY(35px) rotate(var(--tilt, 4deg)); }
-.sim-top { position: absolute; inset: 25px 0 0; transform-origin: 50% 78%; animation: top-spin var(--spin-duration, .35s) linear infinite; }
+.sim-top { position: absolute; inset: 25px 0 0; transform-origin: 50% 78%; }
+.sim-stage.is-playing .sim-top { animation: top-spin var(--spin-duration, .35s) linear infinite; }
 .sim-top::before { content: ""; position: absolute; top: 0; left: 30px; width: 60px; height: 135px; border-radius: 45% 45% 55% 55%; background: linear-gradient(90deg, #873a29, #f0c57f 45%, #d69743 68%, #6e2f23); clip-path: polygon(43% 0,57% 0,62% 14%,88% 33%,100% 53%,79% 75%,57% 86%,54% 100%,46% 100%,43% 86%,21% 75%,0 53%,12% 33%,38% 14%); }
 .sim-top i { position: absolute; left: 56px; top: 135px; width: 8px; height: 35px; background: #b8b09f; clip-path: polygon(0 0,100% 0,55% 100%,45% 100%); }
 .precession-path { position: absolute; top: 47px; width: 210px; height: 70px; border: 2px dashed rgba(240,197,127,.42); border-radius: 50%; }
@@ -251,4 +252,3 @@ h1, h2, h3, h4 { line-height: 1.18; }
 .site-footer > div { display: flex; justify-content: space-between; gap: 40px; }
 .site-footer p { margin: 0; font-size: 12px; }
 .site-footer strong { color: white; font-size: 15px; }
-
