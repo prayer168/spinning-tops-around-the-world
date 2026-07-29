@@ -19,13 +19,13 @@ const [html, content, quiz, resources, config] = await Promise.all([
 ]);
 
 assert(config.language === "zh-TW", "教材語言設定為 zh-TW");
-assert(config.version === "1.0.1", "專案版本為 1.0.1");
+assert(config.version === "1.0.2", "專案版本為 1.0.2");
 
 const tabs = html.match(/role="tab"/g) ?? [];
 const panels = html.match(/role="tabpanel"/g) ?? [];
 assert(tabs.length === 7, "共有 7 個無障礙頁籤");
 assert(panels.length === 7, "共有 7 個對應頁籤面板");
-assert((html.match(/<img\b/g) ?? []).length === 13, "教材頁面放置 13 張教學圖片");
+assert((html.match(/<img\b/g) ?? []).length === 14, "教材頁面直接放置 14 張教學圖片");
 assert(!/<img\b(?![^>]*\balt=)[^>]*>/i.test(html), "每張頁面圖片都有 alt 文字");
 
 assert(content.scienceConcepts.length === 6, "旋轉科學包含 6 個核心概念");
@@ -45,14 +45,14 @@ assert(resources.every(item => /^https:\/\//.test(item.url) && item.checkedAt ==
 const expectedImages = [
   "atlas-china-diabolo.webp", "atlas-europe.webp", "atlas-india-seasia.webp",
   "atlas-japan-korea.webp", "atlas-mexico.webp", "hero-world-tops.webp",
-  "safety-do-dont.webp", "science-anatomy.webp", "science-stages.webp",
+  "safety-do-dont.webp", "science-anatomy.webp", "science-forces-overview.webp", "science-stages.webp",
   "science-variables.webp", "social-preview.png", "taiwan-games.webp",
   "taiwan-throw-steps.webp", "taiwan-top-battle.webp", "taiwan-top-finger.webp",
   "taiwan-top-rope.webp", "taiwan-top-whip.webp", "taiwan-wood-top.webp"
 ];
 const imageDir = new URL("assets/images/", root);
 const actualImages = (await readdir(imageDir)).sort();
-assert(JSON.stringify(actualImages) === JSON.stringify(expectedImages), "Image 2.0 最終資產共 18 張且檔名正確");
+assert(JSON.stringify(actualImages) === JSON.stringify(expectedImages), "Image 2.0 最終資產共 19 張且檔名正確");
 for (const file of actualImages) {
   const info = await stat(join(fileURLToPath(imageDir), file));
   assert(info.size > 10_000, `${file} 不是空白或占位檔`);

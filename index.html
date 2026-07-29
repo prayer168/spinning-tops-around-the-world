@@ -116,6 +116,49 @@
         </div>
       </div>
 
+      <section class="physics-overview wrap" aria-labelledby="physics-overview-title">
+        <div class="physics-overview-head">
+          <p class="section-number">ONE TOP · SIX CLUES</p>
+          <h3 id="physics-overview-title">把六個概念，放回同一顆陀螺。</h3>
+          <p>沿著編號觀察：旋轉軸與角動量指出方向；重力造成力矩，軸線因而進動；摩擦耗散能量，外圍質量分布則影響轉動慣性。</p>
+        </div>
+        <figure class="physics-figure">
+          <div class="physics-canvas">
+            <img src="assets/images/science-forces-overview.webp" alt="一顆木陀螺以短鈍金屬尖端接觸水平地面，旋轉軸向右傾斜，周圍疊加旋轉軸、角動量、重力、力矩、進動、摩擦與質量分布標示" width="1536" height="1024" loading="lazy">
+            <svg class="physics-overlay" viewBox="0 0 1536 1024" aria-hidden="true">
+              <defs>
+                <marker id="physics-arrow-pine" markerUnits="userSpaceOnUse" markerWidth="30" markerHeight="30" viewBox="0 0 24 24" refX="21" refY="12" orient="auto"><path d="M0,0 L24,12 L0,24 Z" fill="#183a30"/></marker>
+                <marker id="physics-arrow-brick" markerUnits="userSpaceOnUse" markerWidth="30" markerHeight="30" viewBox="0 0 24 24" refX="21" refY="12" orient="auto"><path d="M0,0 L24,12 L0,24 Z" fill="#783323"/></marker>
+                <marker id="physics-arrow-amber" markerUnits="userSpaceOnUse" markerWidth="30" markerHeight="30" viewBox="0 0 24 24" refX="21" refY="12" orient="auto"><path d="M0,0 L24,12 L0,24 Z" fill="#b97725"/></marker>
+              </defs>
+              <path class="physics-axis" d="M758 836 L985 70"/>
+              <path class="physics-momentum" d="M850 520 L956 162" marker-end="url(#physics-arrow-pine)"/>
+              <path class="physics-gravity" d="M852 468 L852 770" marker-end="url(#physics-arrow-brick)"/>
+              <path class="physics-precession" d="M646 177 C735 80 1000 76 1118 169 C1072 223 993 249 924 252" marker-end="url(#physics-arrow-brick)"/>
+              <path class="physics-torque" d="M690 850 C632 812 638 724 708 690" marker-end="url(#physics-arrow-brick)"/>
+              <path class="physics-friction" d="M758 838 L548 838" marker-end="url(#physics-arrow-amber)"/>
+              <ellipse class="physics-mass-ring" cx="844" cy="476" rx="318" ry="105" transform="rotate(12 844 476)"/>
+              <circle class="physics-contact" cx="758" cy="838" r="12"/>
+              <g class="svg-label"><rect x="1082" y="82" width="250" height="54" rx="14"/><text x="1103" y="119">1　旋轉軸</text></g>
+              <g class="svg-label"><rect x="1082" y="164" width="282" height="54" rx="14"/><text x="1103" y="201">2　角動量 L</text></g>
+              <g class="svg-label"><rect x="158" y="635" width="310" height="54" rx="14"/><text x="180" y="672">3　重力與力矩 τ</text></g>
+              <g class="svg-label"><rect x="126" y="112" width="276" height="54" rx="14"/><text x="148" y="149">4　進動路徑</text></g>
+              <g class="svg-label"><rect x="162" y="817" width="280" height="54" rx="14"/><text x="184" y="854">5　接觸摩擦</text></g>
+              <g class="svg-label"><rect x="136" y="405" width="340" height="54" rx="14"/><text x="158" y="442">6　外圍質量分布</text></g>
+            </svg>
+          </div>
+          <figcaption>示意圖呈現定性關係，箭頭長度不代表實際力或角動量的數值大小。</figcaption>
+        </figure>
+        <ol class="physics-legend">
+          <li><span>1</span><div><strong>旋轉軸</strong><small>穿過陀螺本體與尖端的想像直線。</small></div></li>
+          <li><span>2</span><div><strong>角動量</strong><small>方向大致沿旋轉軸；轉得快時不容易快速改變。</small></div></li>
+          <li><span>3</span><div><strong>重力與力矩</strong><small>重心和接觸點錯開，重力便對支點產生力矩。</small></div></li>
+          <li><span>4</span><div><strong>進動</strong><small>力矩改變角動量方向，使傾斜軸線繞圈。</small></div></li>
+          <li><span>5</span><div><strong>摩擦</strong><small>尖端與地面摩擦會耗散能量，使轉速下降。</small></div></li>
+          <li><span>6</span><div><strong>質量分布</strong><small>質量離軸較遠時，轉動慣性通常較大。</small></div></li>
+        </ol>
+      </section>
+
       <div class="concept-grid wrap" id="science-concepts" aria-live="polite"></div>
 
       <div class="stage-story section-dark">
@@ -141,7 +184,7 @@
             <img src="assets/images/science-variables.webp" alt="三組陀螺比較不同轉速、地面粗糙度與重心高度，造型相同但運動穩定程度不同" width="1536" height="1024" loading="lazy">
           </figure>
         </div>
-        <div class="simulator" aria-label="陀螺穩定性互動模擬">
+        <div class="simulator" role="group" aria-label="陀螺穩定性互動模擬">
           <div class="sim-stage" id="sim-stage">
             <div class="precession-path" aria-hidden="true"></div>
             <div class="sim-rig" id="sim-rig" aria-hidden="true"><div class="sim-top"><i></i></div></div>
@@ -153,7 +196,7 @@
             <label for="friction-control"><span>地面摩擦</span><output id="friction-output">25</output><input id="friction-control" type="range" min="5" max="100" value="25"></label>
             <label for="center-control"><span>重心高度</span><output id="center-output">35</output><input id="center-control" type="range" min="15" max="85" value="35"></label>
           </div>
-          <div class="control-buttons" aria-label="動畫控制">
+          <div class="control-buttons" role="group" aria-label="動畫控制">
             <button id="sim-play" type="button">播放</button><button id="sim-pause" type="button">暫停</button><button id="sim-replay" type="button">重播</button><button id="sim-reset" type="button">重設</button>
           </div>
           <label class="speed-select" for="animation-speed">播放速度<select id="animation-speed"><option value="0.6">慢速</option><option value="1" selected>正常</option><option value="1.5">快速</option></select></label>

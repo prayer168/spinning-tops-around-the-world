@@ -107,6 +107,34 @@ h1, h2, h3, h4 { line-height: 1.18; }
 .diagram-note { margin: 0; padding: 16px; color: rgba(255,255,255,.75); border-top: 1px solid rgba(255,255,255,.14); font-size: 14px; }
 .diagram-note strong { color: var(--amber-light); }
 
+.physics-overview { padding-top: 70px; }
+.physics-overview-head { margin-bottom: 26px; display: grid; grid-template-columns: .72fr 1.28fr; column-gap: 46px; align-items: end; }
+.physics-overview-head .section-number { grid-column: 1; }
+.physics-overview-head h3 { grid-column: 1; margin: 0; font-family: "Noto Serif TC", "PMingLiU", serif; font-size: clamp(28px, 3.6vw, 46px); }
+.physics-overview-head > p:last-child { grid-column: 2; grid-row: 1 / span 2; margin: 0; color: var(--muted); }
+.physics-figure { margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: #efe5d2; box-shadow: var(--shadow); }
+.physics-canvas { position: relative; aspect-ratio: 3 / 2; }
+.physics-canvas img, .physics-overlay { position: absolute; inset: 0; width: 100%; height: 100%; }
+.physics-canvas img { object-fit: cover; }
+.physics-overlay { pointer-events: none; }
+.physics-axis { fill: none; stroke: #183a30; stroke-width: 6; stroke-dasharray: 18 14; opacity: .85; }
+.physics-momentum, .physics-gravity, .physics-precession, .physics-torque, .physics-friction { fill: none; stroke-width: 9; stroke-linecap: round; }
+.physics-momentum { stroke: #183a30; }
+.physics-gravity, .physics-precession, .physics-torque { stroke: #783323; }
+.physics-precession { stroke-dasharray: 20 15; }
+.physics-friction { stroke: #b97725; }
+.physics-mass-ring { fill: none; stroke: #b97725; stroke-width: 9; stroke-dasharray: 22 14; }
+.physics-contact { fill: #fffdf7; stroke: #183a30; stroke-width: 7; }
+.svg-label rect { fill: rgba(13,32,27,.93); stroke: rgba(255,255,255,.65); stroke-width: 2; }
+.svg-label text { fill: #fffdf7; font: 700 28px "Noto Sans TC", sans-serif; }
+.physics-figure figcaption { padding: 14px 20px; color: var(--muted); background: rgba(255,255,255,.6); border-top: 1px solid var(--line); font-size: 13px; }
+.physics-legend { list-style: none; margin: 16px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.physics-legend li { min-height: 86px; padding: 14px; display: grid; grid-template-columns: 34px 1fr; gap: 10px; align-items: start; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.45); }
+.physics-legend span { width: 30px; height: 30px; display: grid; place-items: center; color: var(--white); background: var(--pine-700); border-radius: 50%; font: 700 13px Georgia, serif; }
+.physics-legend strong, .physics-legend small { display: block; }
+.physics-legend strong { font-size: 14px; }
+.physics-legend small { margin-top: 3px; color: var(--muted); font-size: 12px; line-height: 1.55; }
+
 .concept-grid { padding-block: 30px 95px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .concept-card { min-height: 245px; padding: 26px; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.46); }
 .concept-icon { width: 58px; height: 58px; margin-bottom: 24px; display: grid; place-items: center; color: var(--danger); border: 1px solid currentColor; border-radius: 50%; font: 400 28px Georgia, serif; }
