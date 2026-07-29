@@ -241,6 +241,26 @@ body.is-flag-lightbox-open { overflow: hidden; }
 
 .safety-visual { margin-bottom: 24px; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: white; box-shadow: var(--shadow); }
 .safety-visual img { aspect-ratio: 3/2; object-fit: cover; }
+.safety-storyboard { margin-block: 30px 46px; padding: clamp(24px,4vw,42px); background: var(--paper-2); border: 1px solid var(--line); border-radius: var(--radius); }
+.safety-storyboard > header { margin-bottom: 24px; display: grid; grid-template-columns: .7fr 1.3fr; gap: 34px; align-items: end; }
+.safety-storyboard header .section-number { margin-bottom: 8px; color: var(--danger); }
+.safety-storyboard header h3 { margin: 0; font-family: "Noto Serif TC", serif; font-size: clamp(28px,3.4vw,42px); }
+.safety-storyboard header > p { margin: 0; color: var(--muted); }
+.safety-storyboard-grid { margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; list-style: none; }
+.safety-storyboard-grid li { --col: 0; --row: 0; min-width: 0; }
+.safety-storyboard-grid li:nth-child(2) { --col: 1; }
+.safety-storyboard-grid li:nth-child(3) { --col: 2; }
+.safety-storyboard-grid li:nth-child(4) { --row: 1; }
+.safety-storyboard-grid li:nth-child(5) { --col: 1; --row: 1; }
+.safety-storyboard-grid li:nth-child(6) { --col: 2; --row: 1; }
+.safety-storyboard-grid figure { height: 100%; margin: 0; overflow: hidden; display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 14px; background: var(--white); }
+.storyboard-crop { position: relative; overflow: hidden; aspect-ratio: 1; background: #e5d2ad; border-bottom: 1px solid var(--line); }
+.storyboard-crop img { position: absolute; top: calc(var(--row) * -100%); left: calc(var(--col) * -100%); width: 300%; max-width: none; height: auto; }
+.safety-storyboard-grid figcaption { padding: 15px; display: grid; grid-template-columns: 34px 1fr; gap: 10px; flex: 1; }
+.safety-storyboard-grid figcaption b { width: 32px; height: 32px; display: grid; place-items: center; color: white; background: var(--danger); border-radius: 50%; }
+.safety-storyboard-grid figcaption strong, .safety-storyboard-grid figcaption span { display: block; }
+.safety-storyboard-grid figcaption strong { margin-bottom: 3px; font-size: 15px; }
+.safety-storyboard-grid figcaption span { color: var(--muted); font-size: 12px; line-height: 1.6; }
 .safety-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 22px; }
 .sequence-card { padding: clamp(28px,4vw,46px); color: white; background: var(--pine-900); border-radius: var(--radius); }
 .sequence-card .card-label { color: var(--amber-light); }

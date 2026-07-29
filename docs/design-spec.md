@@ -43,4 +43,4 @@
 
 ## 預計檔案
 
-HTML、分層 CSS、原生 JavaScript、內容／題庫／資源 JSON、19 張 Image 2.0 圖像、教師指南、來源、圖像紀錄與測試報告。
+HTML、分層 CSS、原生 JavaScript、內容／題庫／資源 JSON、20 張 Image 2.0 圖像、教師指南、來源、圖像紀錄與測試報告。

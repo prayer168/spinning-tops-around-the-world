@@ -4,7 +4,7 @@
 
 ## 專案狀態
 
-目前版本：`v1.1.0`
+目前版本：`v1.1.1`
 
 - [線上教材](https://prayer168.github.io/spinning-tops-around-the-world/)
 - [GitHub Repository](https://github.com/prayer168/spinning-tops-around-the-world)
@@ -24,7 +24,7 @@
 - 4 種臺灣常見陀螺、8 個國家或區域文化圖鑑
 - 7 面國旗與 1 面歐洲區域識別旗，以可鍵盤操作的 SVG 圖像呈現並可放大 3 倍
 - 6 步安全操作排序與 8 題即時回饋素養挑戰
-- 19 張由 Codex 內建 Image 2.0 分別生成並人工查核的原創圖像資產；包含六概念旋轉受力示意圖與四種臺灣陀螺獨立圖鑑圖
+- 20 張由 Codex 內建 Image 2.0 分別生成並人工查核的原創圖像資產；包含六概念旋轉受力示意圖、四種臺灣陀螺獨立圖鑑圖與安全操作六步驟分鏡
 - 支援鍵盤、觸控、學習進度保存與 `prefers-reduced-motion`
 
 完整資料依據見 [`docs/references.md`](docs/references.md)，課堂建議見 [`docs/teacher-guide.md`](docs/teacher-guide.md)，驗證結果見 [`docs/test-report.md`](docs/test-report.md)。

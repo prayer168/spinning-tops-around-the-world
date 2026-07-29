@@ -100,8 +100,8 @@
   document.querySelector("#sim-reset").addEventListener("click", reset);
   describe();
 
-  const correct = ["檢查場地與器材", "纏繩", "握持", "投擲", "放手並抽繩", "停穩後回收"];
-  const shuffled = ["握持", "停穩後回收", "纏繩", "放手並抽繩", "檢查場地與器材", "投擲"];
+  const correct = ["清空投擲區", "檢查器材", "纏繩", "握持", "投擲並抽繩", "停穩後回收"];
+  const shuffled = ["握持", "停穩後回收", "纏繩", "投擲並抽繩", "清空投擲區", "檢查器材"];
   const bank = document.querySelector("#sequence-bank");
   const answer = document.querySelector("#sequence-answer");
   const feedback = document.querySelector("#sequence-feedback");
@@ -132,4 +132,3 @@
   });
   renderSequence();
 })();
-
