@@ -1,0 +1,21 @@
+{
+  "title": "旋轉世界：各國陀螺文化與科學",
+  "englishTitle": "Spinning Tops Around the World",
+  "projectName": "spinning-tops-around-the-world",
+  "repositoryName": "spinning-tops-around-the-world",
+  "repositoryNameSource": "folder",
+  "version": "0.1.0",
+  "language": "zh-TW",
+  "audience": "國小五年級至國中低年級",
+  "duration": "40～50分鐘",
+  "subjects": ["自然科學", "生活科技", "文化探索"],
+  "mode": "引導模式",
+  "audio": false,
+  "progressTracking": true,
+  "teacherGuide": true,
+  "imagePolicy": "All principal raster illustrations generated with Codex built-in Image 2.0",
+  "checkedAt": "2026-07-29",
+  "repositoryUrl": "",
+  "pagesUrl": ""
+}
+

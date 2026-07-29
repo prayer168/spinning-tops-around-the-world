@@ -1,0 +1,16 @@
+:root {
+  color-scheme: light;
+  --pine-950: #0d201b;
+  --amber-light: #f0c57f;
+  --paper: #f4f0e7;
+  --ink: #18211d;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif; }
+.skip-link { position: fixed; top: -100px; left: 16px; }
+.skip-link:focus { top: 16px; }
+.site-header { padding: 18px 5vw; display: flex; justify-content: space-between; color: white; background: var(--pine-950); }
+main { width: min(960px, calc(100% - 40px)); margin: 12vh auto; }
+h1 { font-family: "Noto Serif TC", "PMingLiU", serif; font-size: clamp(42px, 7vw, 82px); }
+
