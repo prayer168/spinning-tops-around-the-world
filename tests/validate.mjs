@@ -20,7 +20,7 @@ const [html, app, content, quiz, resources, config] = await Promise.all([
 ]);
 
 assert(config.language === "zh-TW", "教材語言設定為 zh-TW");
-assert(config.version === "1.1.1", "專案版本為 1.1.1");
+assert(config.version === "1.1.2", "專案版本為 1.1.2");
 
 const tabs = html.match(/role="tab"/g) ?? [];
 const panels = html.match(/role="tabpanel"/g) ?? [];
