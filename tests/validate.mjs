@@ -20,7 +20,7 @@ const [html, app, content, quiz, resources, config] = await Promise.all([
 ]);
 
 assert(config.language === "zh-TW", "教材語言設定為 zh-TW");
-assert(config.version === "1.3.0", "專案版本為 1.3.0");
+assert(config.version === "1.3.1", "專案版本為 1.3.1");
 
 const tabs = html.match(/role="tab"/g) ?? [];
 const panels = html.match(/role="tabpanel"/g) ?? [];
@@ -74,5 +74,6 @@ assert(html.includes('id="top-mechanics-diagram"') && (html.match(/<li><b>[^<]+<
 assert((html.match(/class="mechanics-equations"/g) ?? []).length === 1 && html.includes("dL／dt = τ"), "詳細力學圖包含角動量、力矩與方向改變關係式");
 assert(html.includes('id="flag-lightbox"') && app.includes("createFlagSvg") && app.includes('event.key === "Escape"'), "旗幟具有 3 倍對話框、SVG 繪圖與 Escape 關閉機制");
 assert(app.includes("createTopImage") && app.includes("top-zoom-trigger") && app.includes('openVisual(item, "top"'), "八張代表陀螺縮圖與旗幟並列，且可開啟 3 倍放大檢視");
+assert(html.includes('property="og:image:alt"') && html.includes('name="twitter:card" content="summary_large_image"') && html.includes('name="twitter:image:alt"'), "Facebook 與 Twitter 社群預覽 metadata 完整");
 
 console.log(`通過 ${checks.length} 項結構與資料驗證。`);

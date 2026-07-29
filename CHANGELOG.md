@@ -1,5 +1,11 @@
 # 更新紀錄
 
+## [1.3.1] - 2026-07-29
+
+### Added
+
+- 補齊 Open Graph 圖片替代文字與 Twitter Summary Large Image metadata，改善 Facebook、Messenger 與其他社群平台的連結預覽及無障礙描述。
+
 ## [1.3.0] - 2026-07-29
 
 ### Added

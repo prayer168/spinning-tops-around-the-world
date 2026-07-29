@@ -4,7 +4,7 @@
 
 ## 專案狀態
 
-目前版本：`v1.3.0`
+目前版本：`v1.3.1`
 
 - [線上教材](https://prayer168.github.io/spinning-tops-around-the-world/)
 - [GitHub Repository](https://github.com/prayer168/spinning-tops-around-the-world)
