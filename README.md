@@ -4,7 +4,7 @@
 
 ## 專案狀態
 
-目前版本：`v1.2.0`
+目前版本：`v1.3.0`
 
 - [線上教材](https://prayer168.github.io/spinning-tops-around-the-world/)
 - [GitHub Repository](https://github.com/prayer168/spinning-tops-around-the-world)
@@ -23,9 +23,9 @@
 - 可調轉速、摩擦力與重心位置的定性科學模擬
 - 傾斜陀螺的12項構造與力學標示、三項核心關係式及可重現方向驗證
 - 4 種臺灣常見陀螺、8 個國家或區域文化圖鑑
-- 7 面國旗與 1 面歐洲區域識別旗，以可鍵盤操作的 SVG 圖像呈現並可放大 3 倍
+- 7 面國旗與 1 面歐洲區域識別旗旁各有代表陀螺縮圖，兩類圖像皆可用鍵盤開啟 3 倍放大檢視
 - 6 步安全操作排序與 8 題即時回饋素養挑戰
-- 20 張由 Codex 內建 Image 2.0 分別生成並人工查核的原創圖像資產；包含六概念旋轉受力示意圖、四種臺灣陀螺獨立圖鑑圖與安全操作六步驟分鏡
+- 20 張由 Codex 內建 Image 2.0 分別生成並人工查核的原創圖像資產，以及從既有世界圖鑑無損用途裁切的 8 張國別陀螺縮圖
 - 支援鍵盤、觸控、學習進度保存與 `prefers-reduced-motion`
 
 完整資料依據見 [`docs/references.md`](docs/references.md)，課堂建議見 [`docs/teacher-guide.md`](docs/teacher-guide.md)，驗證結果見 [`docs/test-report.md`](docs/test-report.md)。

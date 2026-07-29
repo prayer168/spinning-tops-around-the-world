@@ -42,8 +42,22 @@
 
 - 章節圖片由1536×1024 PNG轉為WebP，品質設定86。
 - 社群圖由 Image 2.0 寬幅原稿縮放為1200×630 PNG。
+- 世界文化卡新增八張512×512 WebP縮圖，分別從既有 `atlas-japan-korea.webp`、`atlas-china-diabolo.webp`、`atlas-india-seasia.webp`、`atlas-mexico.webp` 與 `atlas-europe.webp` 裁切；未重新生成或改變文化造型。
 - 網站文字、力向量、構造標籤與圖說以HTML／SVG呈現，不依賴生成圖內文字。
 - 專案內轉檔用PNG複本已移除；Codex預設生成目錄仍保留原始檔。
+
+### 世界文化卡衍生縮圖
+
+| 縮圖 | 來源圖鑑 | 代表造型 |
+| --- | --- | --- |
+| `atlas-top-japan.webp` | `atlas-japan-korea.webp` | 日本木獨樂（koma） |
+| `atlas-top-korea.webp` | `atlas-japan-korea.webp` | 韓國傳統陀螺（paengi） |
+| `atlas-top-china.webp` | `atlas-china-diabolo.webp` | 中國傳統木陀螺 |
+| `atlas-top-india.webp` | `atlas-india-seasia.webp` | 印度 lattu |
+| `atlas-top-indonesia.webp` | `atlas-india-seasia.webp` | 印尼 gasing |
+| `atlas-top-malaysia.webp` | `atlas-india-seasia.webp` | 馬來西亞盤形 gasing |
+| `atlas-top-mexico.webp` | `atlas-mexico.webp` | 墨西哥 trompo |
+| `atlas-top-europe.webp` | `atlas-europe.webp` | 歐洲發聲陀螺（humming top） |
 
 ### 安全六步驟最終提示詞摘要
 

@@ -49,7 +49,7 @@
 }
 
 @media (max-width: 560px) {
-  :root { --flag-thumb: 28vw; }
+  :root { --flag-thumb: min(28vw, 132px); }
   .brand small { display: none; }
   .brand-mark { width: 36px; height: 36px; }
   .reset-progress { padding: 7px 10px; }
@@ -71,7 +71,8 @@
   .atlas-detail dl, .top-type-card dl { grid-template-columns: 1fr; }
   .safety-storyboard { padding: 18px; }
   .safety-storyboard-grid { grid-template-columns: 1fr; }
-  .atlas-detail-head { grid-template-columns: 1fr auto; }
+  .atlas-detail-head { grid-template-columns: 1fr; }
+  .atlas-card-visuals { justify-self: start; }
   .atlas-detail-head h3 { font-size: 34px; }
   .flag-lightbox { padding-inline: 10px; }
   .flag-lightbox-card { min-height: 500px; padding-inline: 18px; }

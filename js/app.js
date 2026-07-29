@@ -79,6 +79,10 @@
     return `<svg class="flag-art" viewBox="${flag.viewBox}" role="img" aria-label="${item.flagName}" xmlns="http://www.w3.org/2000/svg"><title>${item.flagName}</title>${flag.art}</svg>`;
   }
 
+  function createTopImage(item) {
+    return `<img class="atlas-top-art" src="${item.topImage}" alt="${item.topAlt}" width="512" height="512" loading="lazy">`;
+  }
+
   function renderAtlas(items) {
     const buttons = document.querySelector("#atlas-buttons");
     const detail = document.querySelector("#atlas-detail");
@@ -88,21 +92,27 @@
     const lightboxNote = document.querySelector("#flag-lightbox-note");
     const lightboxSource = document.querySelector("#flag-lightbox-source");
     const lightboxClose = document.querySelector("#flag-lightbox-close");
-    let lastFlagTrigger = null;
+    let lastVisualTrigger = null;
 
-    function closeFlag() {
+    function closeVisual() {
       if (lightbox.hidden) return;
       lightbox.hidden = true;
       document.body.classList.remove("is-flag-lightbox-open");
-      lastFlagTrigger?.focus();
+      lightboxArt.classList.remove("is-top-image");
+      lastVisualTrigger?.focus();
     }
 
-    function openFlag(item, trigger) {
-      lastFlagTrigger = trigger;
-      lightboxTitle.textContent = item.flagName;
-      lightboxNote.textContent = `${item.flagNote} 圖像寬度為卡片旗幟的 3 倍。`;
-      lightboxSource.href = item.flagSource;
-      lightboxArt.innerHTML = createFlagSvg(item);
+    function openVisual(item, type, trigger) {
+      const isTop = type === "top";
+      lastVisualTrigger = trigger;
+      lightboxTitle.textContent = isTop ? item.topName : item.flagName;
+      lightboxNote.textContent = isTop
+        ? `${item.topAlt}。縮圖取自本教材已查核的世界圖鑑，放大寬度為卡片縮圖的 3 倍。`
+        : `${item.flagNote} 圖像寬度為卡片旗幟的 3 倍。`;
+      lightboxSource.href = isTop ? item.source : item.flagSource;
+      lightboxSource.textContent = isTop ? "查看陀螺來源 ↗" : "查看官方旗幟來源 ↗";
+      lightboxArt.classList.toggle("is-top-image", isTop);
+      lightboxArt.innerHTML = isTop ? createTopImage(item) : createFlagSvg(item);
       lightbox.hidden = false;
       document.body.classList.add("is-flag-lightbox-open");
       lightboxClose.focus();
@@ -113,10 +123,16 @@
       detail.innerHTML = `
         <div class="atlas-detail-head">
           <div><p class="region-tag">CULTURE CARD · ${item.region}</p><h3>${item.region}</h3><p class="local-name">${item.localName}</p></div>
-          <button class="flag-zoom-trigger" type="button" aria-label="放大${item.flagName}至 3 倍" aria-haspopup="dialog">
-            ${createFlagSvg(item)}
-            <span>${item.flagName}<small>點擊放大 3×</small></span>
-          </button>
+          <div class="atlas-card-visuals" role="group" aria-label="${item.region}的旗幟與代表陀螺">
+            <button class="atlas-visual-trigger flag-zoom-trigger" type="button" aria-label="放大${item.flagName}至 3 倍" aria-haspopup="dialog">
+              <span class="atlas-visual-frame atlas-flag-frame">${createFlagSvg(item)}</span>
+              <span class="atlas-visual-caption">${item.flagName}<small>點擊放大 3×</small></span>
+            </button>
+            <button class="atlas-visual-trigger top-zoom-trigger" type="button" aria-label="放大${item.topName}至 3 倍" aria-haspopup="dialog">
+              <span class="atlas-visual-frame">${createTopImage(item)}</span>
+              <span class="atlas-visual-caption">${item.topName}<small>點擊放大 3×</small></span>
+            </button>
+          </div>
         </div>
         <dl>
           <dt>材料</dt><dd>${item.material}</dd>
@@ -126,7 +142,8 @@
           <dt>文化</dt><dd>${item.culture}</dd>
         </dl>
         <div class="atlas-source-links"><a href="${item.source}" target="_blank" rel="noreferrer">查看陀螺來源 ↗</a><a href="${item.flagSource}" target="_blank" rel="noreferrer">查看旗幟來源 ↗</a></div>`;
-      detail.querySelector(".flag-zoom-trigger").addEventListener("click", event => openFlag(item, event.currentTarget));
+      detail.querySelector(".flag-zoom-trigger").addEventListener("click", event => openVisual(item, "flag", event.currentTarget));
+      detail.querySelector(".top-zoom-trigger").addEventListener("click", event => openVisual(item, "top", event.currentTarget));
       if (moveFocus) detail.focus();
     }
 
@@ -137,13 +154,13 @@
       const item = items.find(entry => entry.id === button.dataset.region);
       if (item) select(item, true);
     });
-    lightboxClose.addEventListener("click", closeFlag);
+    lightboxClose.addEventListener("click", closeVisual);
     lightbox.addEventListener("click", event => {
-      if (event.target === lightbox) closeFlag();
+      if (event.target === lightbox) closeVisual();
     });
     document.addEventListener("keydown", event => {
       if (lightbox.hidden) return;
-      if (event.key === "Escape") closeFlag();
+      if (event.key === "Escape") closeVisual();
       if (event.key === "Tab") {
         const focusable = [...lightbox.querySelectorAll("button, a[href]")];
         const first = focusable[0];
