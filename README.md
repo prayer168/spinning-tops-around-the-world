@@ -6,6 +6,9 @@
 
 目前版本：`v1.0.0`
 
+- [線上教材](https://prayer168.github.io/spinning-tops-around-the-world/)
+- [GitHub Repository](https://github.com/prayer168/spinning-tops-around-the-world)
+
 ## 教材內容
 
 - 學習任務與學習進度
