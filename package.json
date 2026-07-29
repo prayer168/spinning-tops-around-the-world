@@ -1,10 +1,10 @@
 {
   "name": "spinning-tops-around-the-world",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "private": true,
   "description": "旋轉世界：各國陀螺文化與科學互動教材",
   "scripts": {
     "serve": "python -m http.server 8080",
-    "test": "node tests/validate.mjs"
+    "test": "node tests/validate.mjs && node tests/validate-top-mechanics.mjs"
   }
 }

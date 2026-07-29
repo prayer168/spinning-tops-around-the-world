@@ -89,24 +89,56 @@ h1, h2, h3, h4 { line-height: 1.18; }
 .panel-head { padding-block: 92px 60px; display: grid; grid-template-columns: 1.1fr .9fr; gap: 90px; align-items: end; }
 .panel-head h2 em { color: var(--danger); }
 .panel-head > p { margin: 0 0 8px; color: var(--muted); font-size: 17px; }
-.science-feature, .split-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: stretch; }
+.science-feature { display: grid; grid-template-columns: .78fr 1.22fr; gap: 30px; align-items: start; }
+.split-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: stretch; }
 .editorial-visual { margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(255,255,255,.52); box-shadow: 0 16px 46px rgba(13,32,27,.09); }
 .editorial-visual img { aspect-ratio: 3 / 2; object-fit: cover; }
 .editorial-visual figcaption, .safety-visual figcaption { padding: 14px 18px 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
-.anatomy-diagram { padding: 26px; display: grid; grid-template-rows: 1fr auto; background: var(--pine-900); color: white; border-radius: var(--radius); }
-.anatomy-diagram svg { width: 100%; max-height: 480px; }
+.anatomy-diagram { overflow: hidden; background: var(--pine-900); color: white; border-radius: var(--radius); }
+.mechanics-svg-scroll { padding: 20px 18px 4px; overflow-x: auto; overscroll-behavior-inline: contain; scrollbar-color: var(--amber) rgba(255,255,255,.12); }
+.anatomy-diagram svg { width: 100%; min-width: 680px; display: block; }
 .top-body { fill: #d69743; stroke: #f0c57f; stroke-width: 4; }
 .top-cap { fill: #873a29; }
 .top-tip { fill: #b8b09f; }
 .axis-line { stroke: #f0c57f; stroke-width: 3; stroke-dasharray: 9 8; }
 .center-dot { fill: #fffdf7; stroke: #873a29; stroke-width: 5; }
-.contact-dot { fill: #f0c57f; }
-.force-line { color: #f0c57f; stroke: currentColor; stroke-width: 4; }
+.contact-dot { fill: #f0c57f; stroke: #122b24; stroke-width: 4; }
+.mechanics-ground { stroke: rgba(255,255,255,.48); stroke-width: 3; }
+.mechanics-vertical { stroke: rgba(255,255,255,.34); stroke-width: 2; stroke-dasharray: 8 8; }
+.mechanics-mass-band { fill: rgba(120,51,35,.16); stroke: #f0c57f; stroke-width: 4; stroke-dasharray: 12 9; }
+.mechanics-precession { fill: none; stroke: #f0c57f; stroke-width: 4; stroke-dasharray: 14 10; }
+.mechanics-momentum, .mechanics-spin, .mechanics-lever, .mechanics-gravity, .mechanics-normal, .mechanics-friction { fill: none; stroke-width: 5; stroke-linecap: round; }
+.mechanics-momentum, .mechanics-lever, .mechanics-normal { stroke: #a9b49c; }
+.mechanics-lever { stroke-dasharray: 9 7; }
+.mechanics-spin, .mechanics-friction { stroke: #f0c57f; }
+.mechanics-gravity { stroke: #d66a4f; }
+#mechanics-arrow-amber path { fill: #f0c57f; }
+#mechanics-arrow-brick path { fill: #d66a4f; }
+#mechanics-arrow-sage path { fill: #a9b49c; }
+.mechanics-torque-symbol circle:first-child { fill: rgba(214,106,79,.12); stroke: #d66a4f; stroke-width: 4; }
+.mechanics-torque-symbol circle:last-child { fill: #d66a4f; }
 .diagram-label line { stroke: rgba(255,255,255,.5); stroke-width: 2; }
-.diagram-label text, .force-label { fill: white; font: 700 18px "Noto Sans TC", sans-serif; }
-.force-label { fill: #f0c57f; }
+.diagram-label text, .mechanics-vector-label, .mechanics-small-label, .mechanics-subtext { fill: white; font-family: "Noto Sans TC", sans-serif; }
+.diagram-label text, .mechanics-vector-label { font-size: 18px; font-weight: 800; }
+.mechanics-small-label { fill: rgba(255,255,255,.7); font-size: 13px; }
+.mechanics-subtext { fill: rgba(255,255,255,.62); font-size: 13px; }
+.mechanics-label-sage { fill: #cbd4c4; }
+.mechanics-label-amber { fill: #f0c57f; }
+.mechanics-label-brick { fill: #ef9b86; }
+.mechanics-legend { margin: 8px 18px 18px; padding: 0; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; list-style: none; }
+.mechanics-legend li { min-width: 0; padding: 12px; display: grid; grid-template-columns: 42px 1fr; gap: 10px; border: 1px solid rgba(255,255,255,.15); border-radius: 12px; background: rgba(255,255,255,.05); }
+.mechanics-legend b { width: 40px; height: 30px; display: grid; place-items: center; color: var(--pine-950); background: var(--amber-light); border-radius: 999px; font-size: 11px; }
+.mechanics-legend strong, .mechanics-legend small { display: block; }
+.mechanics-legend strong { font-size: 13px; }
+.mechanics-legend small { margin-top: 3px; color: rgba(255,255,255,.68); font-size: 11px; line-height: 1.55; }
+.mechanics-equations { margin: 0 18px 18px; display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; }
+.mechanics-equations p { margin: 0; padding: 10px 12px; border-left: 3px solid var(--amber-light); background: rgba(255,255,255,.06); }
+.mechanics-equations strong, .mechanics-equations span { display: block; }
+.mechanics-equations strong { color: rgba(255,255,255,.65); font-size: 10px; letter-spacing: .08em; }
+.mechanics-equations span { margin-top: 3px; color: var(--amber-light); font: 700 14px Georgia, "Noto Serif TC", serif; }
 .diagram-note { margin: 0; padding: 16px; color: rgba(255,255,255,.75); border-top: 1px solid rgba(255,255,255,.14); font-size: 14px; }
 .diagram-note strong { color: var(--amber-light); }
+.diagram-note a { margin-left: 8px; color: white; white-space: nowrap; text-underline-offset: 4px; }
 
 .physics-overview { padding-top: 70px; }
 .physics-overview-head { margin-bottom: 26px; display: grid; grid-template-columns: .72fr 1.28fr; column-gap: 46px; align-items: end; }

@@ -20,7 +20,7 @@ const [html, app, content, quiz, resources, config] = await Promise.all([
 ]);
 
 assert(config.language === "zh-TW", "教材語言設定為 zh-TW");
-assert(config.version === "1.1.2", "專案版本為 1.1.2");
+assert(config.version === "1.2.0", "專案版本為 1.2.0");
 
 const tabs = html.match(/role="tab"/g) ?? [];
 const panels = html.match(/role="tabpanel"/g) ?? [];
@@ -65,6 +65,8 @@ assert(!/[A-Z]:\\|file:\/\//i.test(html), "HTML 不含本機絕對路徑");
 assert(html.includes('id="sim-play"') && html.includes('id="sim-pause"') && html.includes('id="sim-reset"'), "模擬器具有播放、暫停與重設控制");
 assert(html.includes('id="sequence-bank"') && html.includes('id="quiz-card"'), "排序活動與測驗容器存在");
 assert((html.match(/class="storyboard-crop"/g) ?? []).length === 6, "安全操作六步驟各有獨立分鏡與圖說");
+assert(html.includes('id="top-mechanics-diagram"') && (html.match(/<li><b>[^<]+<\/b><div><strong>/g) ?? []).length >= 12, "詳細陀螺力學圖包含 12 項構造與受力說明");
+assert((html.match(/class="mechanics-equations"/g) ?? []).length === 1 && html.includes("dL／dt = τ"), "詳細力學圖包含角動量、力矩與方向改變關係式");
 assert(html.includes('id="flag-lightbox"') && app.includes("createFlagSvg") && app.includes('event.key === "Escape"'), "旗幟具有 3 倍對話框、SVG 繪圖與 Escape 關閉機制");
 
 console.log(`通過 ${checks.length} 項結構與資料驗證。`);

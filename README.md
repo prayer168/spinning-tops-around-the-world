@@ -4,7 +4,7 @@
 
 ## 專案狀態
 
-目前版本：`v1.1.2`
+目前版本：`v1.2.0`
 
 - [線上教材](https://prayer168.github.io/spinning-tops-around-the-world/)
 - [GitHub Repository](https://github.com/prayer168/spinning-tops-around-the-world)
@@ -21,6 +21,7 @@
 
 - 7 個符合 ARIA 頁籤模式的單一學習任務
 - 可調轉速、摩擦力與重心位置的定性科學模擬
+- 傾斜陀螺的12項構造與力學標示、三項核心關係式及可重現方向驗證
 - 4 種臺灣常見陀螺、8 個國家或區域文化圖鑑
 - 7 面國旗與 1 面歐洲區域識別旗，以可鍵盤操作的 SVG 圖像呈現並可放大 3 倍
 - 6 步安全操作排序與 8 題即時回饋素養挑戰

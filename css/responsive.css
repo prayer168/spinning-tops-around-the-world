@@ -61,7 +61,10 @@
   .concept-card { min-height: auto; }
   .panel-head h2, .task-intro h2, .lab h2, .source-inner h2 { font-size: 38px; }
   .panel-head > p { font-size: 15px; }
-  .anatomy-diagram { padding: 12px; }
+  .mechanics-svg-scroll { padding-inline: 10px; }
+  .anatomy-diagram svg { min-width: 680px; }
+  .mechanics-legend { grid-template-columns: 1fr; margin-inline: 10px; }
+  .mechanics-equations { grid-template-columns: 1fr; margin-inline: 10px; }
   .sim-stage { height: 300px; }
   .atlas-gallery { grid-template-columns: 1fr; grid-auto-rows: 210px; }
   .atlas-gallery figure:nth-child(n) { grid-column: auto; grid-row: auto; }

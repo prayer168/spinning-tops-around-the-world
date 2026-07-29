@@ -1,0 +1,23 @@
+{
+  "system": "tilted-axis spinning top",
+  "entry": "index.html",
+  "selector": "#top-mechanics-diagram",
+  "conventions": {
+    "x": "right",
+    "y": "up",
+    "z": "out-of-page",
+    "spinAxis": "from contact point toward handle",
+    "tilt": "left of vertical"
+  },
+  "diagram": {
+    "tiltDeg": 16,
+    "torqueDirection": "out-of-page"
+  },
+  "sample": {
+    "massKg": 0.18,
+    "centerToContactM": 0.12,
+    "angularSpeedRadS": 120,
+    "momentOfInertiaKgM2": 0.0008,
+    "gravityMS2": 9.81
+  }
+}

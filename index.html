@@ -96,23 +96,81 @@
           <figcaption>圖像負責呈現材質與構造；精確位置由右側SVG圖解標示。</figcaption>
         </figure>
         <div class="anatomy-diagram">
-          <svg viewBox="0 0 520 500" role="img" aria-labelledby="anatomy-title anatomy-desc">
-            <title id="anatomy-title">陀螺構造與受力圖</title>
-            <desc id="anatomy-desc">陀螺以尖端接觸地面，旋轉軸穿過本體；重心位於軸線上，重力向下。當軸傾斜，重心與支點錯開而產生力矩。</desc>
-            <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="currentColor"/></marker></defs>
-            <path class="top-body" d="M260 105 C175 120 130 220 165 305 C185 352 225 378 260 392 C295 378 335 352 355 305 C390 220 345 120 260 105Z"/>
-            <path class="top-cap" d="M225 110 Q260 55 295 110Z"/>
-            <path class="top-tip" d="M248 390 L260 458 L272 390Z"/>
-            <line class="axis-line" x1="260" y1="45" x2="260" y2="465"/>
-            <circle class="center-dot" cx="260" cy="250" r="10"/>
-            <circle class="contact-dot" cx="260" cy="458" r="8"/>
-            <line class="force-line" x1="260" y1="260" x2="260" y2="340" marker-end="url(#arrow)"/>
-            <g class="diagram-label"><line x1="250" y1="72" x2="105" y2="72"/><text x="95" y="78" text-anchor="end">旋轉軸</text></g>
-            <g class="diagram-label"><line x1="250" y1="250" x2="112" y2="250"/><text x="102" y="256" text-anchor="end">重心</text></g>
-            <g class="diagram-label"><line x1="270" y1="458" x2="405" y2="458"/><text x="415" y="464">接觸點</text></g>
-            <text class="force-label" x="280" y="310">重力</text>
-          </svg>
-          <p class="diagram-note"><strong>觀察任務：</strong>如果重心不在接觸點正上方，重力對接觸點會產生什麼轉動效果？</p>
+          <div class="mechanics-svg-scroll" tabindex="0" role="region" aria-label="可水平捲動的陀螺力學圖">
+            <svg id="top-mechanics-diagram" viewBox="0 0 820 650" role="img" aria-labelledby="anatomy-title anatomy-desc" data-tilt-deg="16" data-torque-direction="out-of-page">
+              <title id="anatomy-title">傾斜旋轉陀螺的構造、受力與進動圖</title>
+              <desc id="anatomy-desc">陀螺向左傾斜十六度。圖中標示握柄、本體、外圍質量、金屬陀螺釘、旋轉軸、角速度、角動量、重心、力臂、向下重力、接觸點向上的地面支撐力、方向依滑動而定的摩擦、指向紙面外的重力力矩，以及軸線繞鉛直方向的進動軌跡。</desc>
+              <defs>
+                <marker id="mechanics-arrow-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z"/></marker>
+                <marker id="mechanics-arrow-brick" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z"/></marker>
+                <marker id="mechanics-arrow-sage" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z"/></marker>
+              </defs>
+
+              <line class="mechanics-ground" x1="115" y1="540" x2="730" y2="540"/>
+              <line class="mechanics-vertical" x1="410" y1="48" x2="410" y2="540"/>
+              <text class="mechanics-small-label" x="425" y="64">鉛直參考線</text>
+              <ellipse class="mechanics-precession" cx="410" cy="126" rx="164" ry="42"/>
+
+              <g class="mechanics-top" transform="rotate(-16 410 540)">
+                <path class="top-body" d="M410 150 C312 165 266 292 305 386 C328 434 370 460 410 477 C450 460 492 434 515 386 C554 292 508 165 410 150Z"/>
+                <path class="top-cap" d="M370 156 Q410 92 450 156Z"/>
+                <path class="top-tip" d="M397 475 L410 540 L423 475Z"/>
+                <ellipse class="mechanics-mass-band" cx="410" cy="320" rx="104" ry="40"/>
+                <line class="axis-line" x1="410" y1="75" x2="410" y2="540"/>
+                <line class="mechanics-momentum" x1="410" y1="318" x2="410" y2="88" marker-end="url(#mechanics-arrow-sage)"/>
+                <path class="mechanics-spin" d="M326 256 C350 210 470 210 494 256 C475 298 346 300 326 256" marker-end="url(#mechanics-arrow-amber)"/>
+              </g>
+
+              <line class="mechanics-lever" x1="410" y1="540" x2="349" y2="329" marker-end="url(#mechanics-arrow-sage)"/>
+              <circle class="center-dot" cx="349" cy="329" r="10"/>
+              <line class="mechanics-gravity" x1="349" y1="342" x2="349" y2="482" marker-end="url(#mechanics-arrow-brick)"/>
+              <line class="mechanics-normal" x1="410" y1="532" x2="410" y2="418" marker-end="url(#mechanics-arrow-sage)"/>
+              <line class="mechanics-friction" x1="350" y1="572" x2="470" y2="572" marker-start="url(#mechanics-arrow-amber)" marker-end="url(#mechanics-arrow-amber)"/>
+              <circle class="contact-dot" cx="410" cy="540" r="9"/>
+              <g class="mechanics-torque-symbol"><circle cx="236" cy="446" r="18"/><circle cx="236" cy="446" r="5"/></g>
+
+              <g class="diagram-label"><line x1="281" y1="95" x2="128" y2="95"/><text x="118" y="101" text-anchor="end">旋轉軸</text></g>
+              <g class="diagram-label"><line x1="303" y1="154" x2="558" y2="154"/><text x="568" y="160">握柄</text></g>
+              <g class="diagram-label"><line x1="253" y1="248" x2="128" y2="248"/><text x="118" y="254" text-anchor="end">木製本體</text></g>
+              <g class="diagram-label"><line x1="257" y1="300" x2="128" y2="300"/><text x="118" y="306" text-anchor="end">外圍質量</text></g>
+              <g class="diagram-label"><line x1="339" y1="329" x2="128" y2="351"/><text x="118" y="357" text-anchor="end">重心 C</text></g>
+              <g class="diagram-label"><line x1="385" y1="472" x2="558" y2="472"/><text x="568" y="478">金屬陀螺釘</text></g>
+              <g class="diagram-label"><line x1="420" y1="540" x2="558" y2="540"/><text x="568" y="546">接觸點 P</text></g>
+              <g class="diagram-label"><line x1="514" y1="126" x2="674" y2="91"/><text x="684" y="66" text-anchor="end">進動軌跡 Ω</text><text class="mechanics-subtext" x="684" y="94" text-anchor="end">方向隨自旋方向改變</text></g>
+
+              <text class="mechanics-vector-label mechanics-label-sage" x="299" y="204">角動量 L</text>
+              <text class="mechanics-vector-label mechanics-label-amber" x="505" y="244">角速度 ω</text>
+              <text class="mechanics-vector-label mechanics-label-sage" x="438" y="468">支撐力 N</text>
+              <text class="mechanics-vector-label mechanics-label-brick" x="260" y="452">重力 mg</text>
+              <text class="mechanics-vector-label mechanics-label-sage" x="438" y="392">力臂 r</text>
+              <text class="mechanics-vector-label mechanics-label-amber" x="410" y="605" text-anchor="middle">摩擦 f：方向依相對滑動</text>
+              <text class="mechanics-vector-label mechanics-label-brick" x="72" y="432">力矩 τ = r × mg</text>
+              <text class="mechanics-subtext" x="72" y="458">⊙ 表示指向紙面外</text>
+              <text class="mechanics-small-label" x="734" y="534" text-anchor="end">水平地面</text>
+            </svg>
+          </div>
+
+          <ol class="mechanics-legend" aria-label="陀螺各部分與力學意義">
+            <li><b>構造</b><div><strong>握柄、本體與陀螺釘</strong><small>握柄便於啟動；本體承載主要質量；短鈍金屬尖端把運動集中到很小的接觸區。</small></div></li>
+            <li><b>P</b><div><strong>接觸點</strong><small>地面支撐力與接觸摩擦作用的位置，也是計算重力力矩時選用的支點。</small></div></li>
+            <li><b>C</b><div><strong>重心</strong><small>可把整顆陀螺的重力視為集中作用在此。均勻且對稱的陀螺，重心通常位於對稱軸上。</small></div></li>
+            <li><b>ω</b><div><strong>角速度</strong><small>表示陀螺繞自身旋轉軸轉動的快慢與方向；方向依右手定則決定。</small></div></li>
+            <li><b>I</b><div><strong>轉動慣量與質量分布</strong><small>I = Σmρ²；質量離旋轉軸越遠，對轉動慣量的貢獻越大。</small></div></li>
+            <li><b>L</b><div><strong>角動量</strong><small>對接近軸對稱且快速自旋的陀螺，可近似寫成 L ≈ Iω，方向大致沿旋轉軸。</small></div></li>
+            <li><b>mg</b><div><strong>重力</strong><small>在重心 C 向下作用。重力沒有被旋轉抵消，陀螺仍持續受到地球吸引。</small></div></li>
+            <li><b>N</b><div><strong>地面支撐力</strong><small>由接觸點 P 大致向上；只有在鉛直加速度很小時，大小才可近似與重力平衡。</small></div></li>
+            <li><b>f</b><div><strong>接觸摩擦</strong><small>方向反抗接觸點的相對滑動，不一定固定向左或向右；它也會耗散部分機械能。</small></div></li>
+            <li><b>r</b><div><strong>力臂向量</strong><small>從接觸點 P 指向重心 C。陀螺傾斜後，r 與重力不在同一直線上。</small></div></li>
+            <li><b>τ</b><div><strong>重力力矩</strong><small>τ = r × mg；此圖向左傾斜，因此力矩指向紙面外，主要改變 L 的方向。</small></div></li>
+            <li><b>Ω</b><div><strong>進動</strong><small>軸線繞鉛直方向移動。快速且近似穩定進動時，可定性理解為 Ω 約與 τ／L 同量級。</small></div></li>
+          </ol>
+
+          <div class="mechanics-equations" aria-label="陀螺力學關係式">
+            <p><strong>自旋</strong><span>L ≈ Iω</span></p>
+            <p><strong>力矩</strong><span>τ = r × mg</span></p>
+            <p><strong>方向改變</strong><span>dL／dt = τ</span></p>
+          </div>
+          <p class="diagram-note"><strong>讀圖提醒：</strong>圖示箭頭呈現作用位置與方向，長度不代表實際數值。若陀螺完全直立且 C 正好位於 P 上方，重力對 P 的力矩為零；傾斜後才出現圖示的力臂與重力力矩。<a href="docs/references.md#旋轉科學">查看力學來源 →</a></p>
         </div>
       </div>
 
